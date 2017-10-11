@@ -131,6 +131,7 @@
 		E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC51F8DA76A0060D546 /* HNSDKError.m */; };
 		E2863CCF1F8DAA630060D546 /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CCE1F8DAA630060D546 /* HNSearchBar.m */; };
 		E29F50FA1F8DF52500A030D8 /* HNContactAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50F91F8DF52500A030D8 /* HNContactAddController.m */; };
+		E29F50FE1F8E02CF00A030D8 /* HNContactSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -403,6 +404,8 @@
 		E2863CCE1F8DAA630060D546 /* HNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchBar.m; sourceTree = "<group>"; };
 		E29F50F81F8DF52500A030D8 /* HNContactAddController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactAddController.h; sourceTree = "<group>"; };
 		E29F50F91F8DF52500A030D8 /* HNContactAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactAddController.m; sourceTree = "<group>"; };
+		E29F50FC1F8E02CF00A030D8 /* HNContactSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactSearchView.h; sourceTree = "<group>"; };
+		E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactSearchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -782,6 +785,7 @@
 			children = (
 				5E8136F71F868BB6006F7533 /* HNTableViewCell.h */,
 				5E8136F81F868BB6006F7533 /* HNTableViewCell.m */,
+				E29F50FB1F8E029500A030D8 /* AddContactView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1102,6 +1106,15 @@
 			path = AddContactController;
 			sourceTree = "<group>";
 		};
+		E29F50FB1F8E029500A030D8 /* AddContactView */ = {
+			isa = PBXGroup;
+			children = (
+				E29F50FC1F8E02CF00A030D8 /* HNContactSearchView.h */,
+				E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */,
+			);
+			path = AddContactView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1258,6 +1271,7 @@
 				5EA71CFC1F8780A100850CDB /* HNConversationListCell.m in Sources */,
 				5E3CC0071F715A5000445C65 /* UIButton+WebCache.m in Sources */,
 				5E4122E08811E0EBB5AA4DC2 /* AppDelegate.m in Sources */,
+				E29F50FE1F8E02CF00A030D8 /* HNContactSearchView.m in Sources */,
 				5E8136F31F867FEE006F7533 /* HNContactController.m in Sources */,
 				5EE37BCC1F73FCE400ACA971 /* HNPhotoBrowserAnimator.m in Sources */,
 				5E8136FE1F8692BD006F7533 /* UIColor+Extensions.m in Sources */,
