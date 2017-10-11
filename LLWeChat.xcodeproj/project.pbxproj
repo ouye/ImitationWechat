@@ -124,11 +124,11 @@
 		DDEEF79E1DDAF10800FCCE5A /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEEF79B1DDAF10800FCCE5A /* libcrypto.a */; };
 		DDEEF79F1DDAF10800FCCE5A /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEEF79C1DDAF10800FCCE5A /* libcurl.a */; };
 		DDEEF7A01DDAF10800FCCE5A /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEEF79D1DDAF10800FCCE5A /* libssl.a */; };
-		E2863CB41F8DA71C0060D546 /* HNChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CA81F8DA71C0060D546 /* HNChatManager.m */; };
-		E2863CB51F8DA71C0060D546 /* HNClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CAA1F8DA71C0060D546 /* HNClientManager.m */; };
-		E2863CB61F8DA71C0060D546 /* HNContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CAC1F8DA71C0060D546 /* HNContactManager.m */; };
-		E2863CB71F8DA71C0060D546 /* HNPushOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CAE1F8DA71C0060D546 /* HNPushOptions.m */; };
-		E2863CB81F8DA71C0060D546 /* HNSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CB11F8DA71C0060D546 /* HNSDKError.m */; };
+		E2863CC81F8DA76A0060D546 /* HNChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CBC1F8DA76A0060D546 /* HNChatManager.m */; };
+		E2863CC91F8DA76A0060D546 /* HNClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CBE1F8DA76A0060D546 /* HNClientManager.m */; };
+		E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC01F8DA76A0060D546 /* HNContactManager.m */; };
+		E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC21F8DA76A0060D546 /* HNPushOptions.m */; };
+		E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC51F8DA76A0060D546 /* HNSDKError.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -384,19 +384,19 @@
 		DDEEF79B1DDAF10800FCCE5A /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = HyphenateSDK/lib/3rdparty/libcrypto.a; sourceTree = "<group>"; };
 		DDEEF79C1DDAF10800FCCE5A /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = HyphenateSDK/lib/3rdparty/libcurl.a; sourceTree = "<group>"; };
 		DDEEF79D1DDAF10800FCCE5A /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = HyphenateSDK/lib/3rdparty/libssl.a; sourceTree = "<group>"; };
-		E2863CA71F8DA71C0060D546 /* HNChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNChatManager.h; sourceTree = "<group>"; };
-		E2863CA81F8DA71C0060D546 /* HNChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChatManager.m; sourceTree = "<group>"; };
-		E2863CA91F8DA71C0060D546 /* HNClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNClientManager.h; sourceTree = "<group>"; };
-		E2863CAA1F8DA71C0060D546 /* HNClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNClientManager.m; sourceTree = "<group>"; };
-		E2863CAB1F8DA71C0060D546 /* HNContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactManager.h; sourceTree = "<group>"; };
-		E2863CAC1F8DA71C0060D546 /* HNContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactManager.m; sourceTree = "<group>"; };
-		E2863CAD1F8DA71C0060D546 /* HNPushOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNPushOptions.h; sourceTree = "<group>"; };
-		E2863CAE1F8DA71C0060D546 /* HNPushOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNPushOptions.m; sourceTree = "<group>"; };
-		E2863CAF1F8DA71C0060D546 /* HNSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDK.h; sourceTree = "<group>"; };
-		E2863CB01F8DA71C0060D546 /* HNSDKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKError.h; sourceTree = "<group>"; };
-		E2863CB11F8DA71C0060D546 /* HNSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSDKError.m; sourceTree = "<group>"; };
-		E2863CB21F8DA71C0060D546 /* HNSDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKErrorCode.h; sourceTree = "<group>"; };
-		E2863CB31F8DA71C0060D546 /* HNSDKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKType.h; sourceTree = "<group>"; };
+		E2863CBB1F8DA76A0060D546 /* HNChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNChatManager.h; sourceTree = "<group>"; };
+		E2863CBC1F8DA76A0060D546 /* HNChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChatManager.m; sourceTree = "<group>"; };
+		E2863CBD1F8DA76A0060D546 /* HNClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNClientManager.h; sourceTree = "<group>"; };
+		E2863CBE1F8DA76A0060D546 /* HNClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNClientManager.m; sourceTree = "<group>"; };
+		E2863CBF1F8DA76A0060D546 /* HNContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactManager.h; sourceTree = "<group>"; };
+		E2863CC01F8DA76A0060D546 /* HNContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactManager.m; sourceTree = "<group>"; };
+		E2863CC11F8DA76A0060D546 /* HNPushOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNPushOptions.h; sourceTree = "<group>"; };
+		E2863CC21F8DA76A0060D546 /* HNPushOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNPushOptions.m; sourceTree = "<group>"; };
+		E2863CC31F8DA76A0060D546 /* HNSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDK.h; sourceTree = "<group>"; };
+		E2863CC41F8DA76A0060D546 /* HNSDKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKError.h; sourceTree = "<group>"; };
+		E2863CC51F8DA76A0060D546 /* HNSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSDKError.m; sourceTree = "<group>"; };
+		E2863CC61F8DA76A0060D546 /* HNSDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKErrorCode.h; sourceTree = "<group>"; };
+		E2863CC71F8DA76A0060D546 /* HNSDKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKType.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1008,7 +1008,7 @@
 				5E70947B1F619C0A0072FFE1 /* Contact */,
 				5E70947C1F619C2A0072FFE1 /* Discovery */,
 				5E70947D1F619C3F0072FFE1 /* ME */,
-				E2863CA51F8DA71C0060D546 /* Server */,
+				E2863CB91F8DA7610060D546 /* Server */,
 				5E3CBFDA1F7159ED00445C65 /* Common */,
 				5E41224EF07118FC49275287 /* AppDelegate.h */,
 				5E41296DC217873C62A365DE /* AppDelegate.m */,
@@ -1056,30 +1056,30 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		E2863CA51F8DA71C0060D546 /* Server */ = {
+		E2863CB91F8DA7610060D546 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				E2863CA61F8DA71C0060D546 /* SDKManager */,
+				E2863CBA1F8DA76A0060D546 /* SDKManager */,
 			);
 			path = Server;
 			sourceTree = "<group>";
 		};
-		E2863CA61F8DA71C0060D546 /* SDKManager */ = {
+		E2863CBA1F8DA76A0060D546 /* SDKManager */ = {
 			isa = PBXGroup;
 			children = (
-				E2863CA71F8DA71C0060D546 /* HNChatManager.h */,
-				E2863CA81F8DA71C0060D546 /* HNChatManager.m */,
-				E2863CA91F8DA71C0060D546 /* HNClientManager.h */,
-				E2863CAA1F8DA71C0060D546 /* HNClientManager.m */,
-				E2863CAB1F8DA71C0060D546 /* HNContactManager.h */,
-				E2863CAC1F8DA71C0060D546 /* HNContactManager.m */,
-				E2863CAD1F8DA71C0060D546 /* HNPushOptions.h */,
-				E2863CAE1F8DA71C0060D546 /* HNPushOptions.m */,
-				E2863CAF1F8DA71C0060D546 /* HNSDK.h */,
-				E2863CB01F8DA71C0060D546 /* HNSDKError.h */,
-				E2863CB11F8DA71C0060D546 /* HNSDKError.m */,
-				E2863CB21F8DA71C0060D546 /* HNSDKErrorCode.h */,
-				E2863CB31F8DA71C0060D546 /* HNSDKType.h */,
+				E2863CBB1F8DA76A0060D546 /* HNChatManager.h */,
+				E2863CBC1F8DA76A0060D546 /* HNChatManager.m */,
+				E2863CBD1F8DA76A0060D546 /* HNClientManager.h */,
+				E2863CBE1F8DA76A0060D546 /* HNClientManager.m */,
+				E2863CBF1F8DA76A0060D546 /* HNContactManager.h */,
+				E2863CC01F8DA76A0060D546 /* HNContactManager.m */,
+				E2863CC11F8DA76A0060D546 /* HNPushOptions.h */,
+				E2863CC21F8DA76A0060D546 /* HNPushOptions.m */,
+				E2863CC31F8DA76A0060D546 /* HNSDK.h */,
+				E2863CC41F8DA76A0060D546 /* HNSDKError.h */,
+				E2863CC51F8DA76A0060D546 /* HNSDKError.m */,
+				E2863CC61F8DA76A0060D546 /* HNSDKErrorCode.h */,
+				E2863CC71F8DA76A0060D546 /* HNSDKType.h */,
 			);
 			path = SDKManager;
 			sourceTree = "<group>";
@@ -1231,9 +1231,9 @@
 				5EEA08701F7D42D40062460B /* MBProgressHUD.m in Sources */,
 				5E3CC0441F715C1A00445C65 /* HNBaseViewController.m in Sources */,
 				5E3CC0571F71653A00445C65 /* UIViewController+Transition.m in Sources */,
-				E2863CB41F8DA71C0060D546 /* HNChatManager.m in Sources */,
+				E2863CC81F8DA76A0060D546 /* HNChatManager.m in Sources */,
 				5E3CC00C1F715A5000445C65 /* UIImageView+WebCache.m in Sources */,
-				E2863CB71F8DA71C0060D546 /* HNPushOptions.m in Sources */,
+				E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */,
 				5EA71CF61F877AD300850CDB /* HNDiscoveryController.m in Sources */,
 				5E3CBFD81F71587200445C65 /* HNPhotoView.m in Sources */,
 				5EA71CFC1F8780A100850CDB /* HNConversationListCell.m in Sources */,
@@ -1244,10 +1244,10 @@
 				5E8136FE1F8692BD006F7533 /* UIColor+Extensions.m in Sources */,
 				5E3CC0081F715A5000445C65 /* UIImage+GIF.m in Sources */,
 				5E5FC0EA1F75664300D57049 /* HNPhotoInteractiveTransition.m in Sources */,
-				E2863CB81F8DA71C0060D546 /* HNSDKError.m in Sources */,
+				E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */,
 				5EE37BCF1F740FBE00ACA971 /* HNExampleViewControoler.m in Sources */,
 				5E3CC0151F715C0F00445C65 /* README.mdown in Sources */,
-				E2863CB51F8DA71C0060D546 /* HNClientManager.m in Sources */,
+				E2863CC91F8DA76A0060D546 /* HNClientManager.m in Sources */,
 				5E3CC0541F715C1A00445C65 /* LLUtils.m in Sources */,
 				5E3CC0531F715C1A00445C65 /* LLUtils+Video.m in Sources */,
 				5E5FC1001F77FCDB00D57049 /* HNContactModel.m in Sources */,
@@ -1282,7 +1282,7 @@
 				5E8136F91F868BB6006F7533 /* HNTableViewCell.m in Sources */,
 				5E57C5B91F63BA8F00866330 /* LLAccoutElectTextFiledView.m in Sources */,
 				5EA71CE51F875CD200850CDB /* HNMeViewController.m in Sources */,
-				E2863CB61F8DA71C0060D546 /* HNContactManager.m in Sources */,
+				E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */,
 				5E3CC00A1F715A5000445C65 /* UIImage+WebP.m in Sources */,
 				5EEA08731F7D4C160062460B /* UIAlertController+Extensions.m in Sources */,
 				5EAF8FDA1F716E3F0004A4C9 /* TransitionConst.m in Sources */,
