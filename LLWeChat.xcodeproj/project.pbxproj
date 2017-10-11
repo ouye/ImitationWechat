@@ -129,6 +129,7 @@
 		E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC01F8DA76A0060D546 /* HNContactManager.m */; };
 		E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC21F8DA76A0060D546 /* HNPushOptions.m */; };
 		E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC51F8DA76A0060D546 /* HNSDKError.m */; };
+		E2863CCF1F8DAA630060D546 /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CCE1F8DAA630060D546 /* HNSearchBar.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -397,6 +398,8 @@
 		E2863CC51F8DA76A0060D546 /* HNSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSDKError.m; sourceTree = "<group>"; };
 		E2863CC61F8DA76A0060D546 /* HNSDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKErrorCode.h; sourceTree = "<group>"; };
 		E2863CC71F8DA76A0060D546 /* HNSDKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKType.h; sourceTree = "<group>"; };
+		E2863CCD1F8DAA630060D546 /* HNSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchBar.h; sourceTree = "<group>"; };
+		E2863CCE1F8DAA630060D546 /* HNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -745,6 +748,8 @@
 			children = (
 				5EA71CFA1F8780A100850CDB /* HNConversationListCell.h */,
 				5EA71CFB1F8780A100850CDB /* HNConversationListCell.m */,
+				E2863CCD1F8DAA630060D546 /* HNSearchBar.h */,
+				E2863CCE1F8DAA630060D546 /* HNSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1260,6 +1265,7 @@
 				5EA71CFF1F87D60100850CDB /* HNLoginViewController.m in Sources */,
 				5E3CC0491F715C1A00445C65 /* UICollectionView+Extensions.m in Sources */,
 				5E3CC0011F715A5000445C65 /* SDWebImageCompat.m in Sources */,
+				E2863CCF1F8DAA630060D546 /* HNSearchBar.m in Sources */,
 				5E3CC0031F715A5000445C65 /* SDWebImageDownloader.m in Sources */,
 				5EA71CF01F87768800850CDB /* HNUserProfile.m in Sources */,
 				5E3CC0041F715A5000445C65 /* SDWebImageDownloaderOperation.m in Sources */,

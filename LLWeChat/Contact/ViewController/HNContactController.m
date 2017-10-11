@@ -21,12 +21,11 @@ UISearchBarDelegate
 
 /*** view 属性 ***/
 @property (nonatomic, strong) UITableView                               *tableView;
-@property (nonatomic, strong) NSMutableArray<NSString *>                *sectionTitles;
 
 /*** 数据类型 属性 ***/
 @property (nonatomic, strong) NSMutableArray<NSMutableArray<HNContactModel *>*> *dataArray;
 @property (nonatomic, strong) NSMutableArray<HNContactModel *>                  *contactSource;
-
+@property (nonatomic, strong) NSMutableArray<NSString *>                        *sectionTitles;
 
 @end
 
