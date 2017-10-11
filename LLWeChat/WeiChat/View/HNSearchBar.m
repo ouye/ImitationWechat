@@ -66,4 +66,64 @@
 }
 
 
+/**
+ *  取消第一响应者身份
+ */
+- (void)resignFirstResponderWithCancelButtonRemainEnabled {
+    [self resignFirstResponder];
+    UIButton *cancelButton = [self searchCancelButton];
+    [cancelButton setEnabled:YES];
+}
+
+/**
+ *  获取 UISearchBar 中的 UITextField
+ */
+- (UITextField *)searchTextField {
+    UITextField *searchTextField = nil;
+    for (UIView* subview in self.subviews[0].subviews) {
+        if ([subview isKindOfClass:[UITextField class]]) {
+            searchTextField = (UITextField*)subview;
+            break;
+        }
+    }
+    NSAssert(searchTextField, @"UISearchBar结构改变");
+    return searchTextField;
+}
+
+
+/**
+ *  获取 UISearchBar 中的 取消 UIButton 按钮
+ */
+- (UIButton *)searchCancelButton {
+    UIButton *btn;
+    NSArray<UIView *> *subviews = self.subviews[0].subviews;
+    for(UIView *view in subviews) {
+        if([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
+            btn = (UIButton *)view;
+            break;
+        }
+    }
+    return btn;
+}
+
+// 重写父类方法
+- (void)setShowsCancelButton:(BOOL)showsCancelButton animated:(BOOL)animated {
+    [super setShowsCancelButton:showsCancelButton animated:animated];
+    
+    [self configCancelButton];
+}
+
+
+- (void)setShowsCancelButton:(BOOL)showsCancelButton {
+    [self setShowsCancelButton:showsCancelButton animated:NO];
+}
+
+
+- (void)configCancelButton {
+    UIButton *cancelButton = [self searchCancelButton];
+    if (cancelButton) {
+        UIColor *color = [cancelButton titleColorForState:UIControlStateNormal];
+        [cancelButton setTitleColor:color forState:UIControlStateDisabled];
+    }
+}
 @end
