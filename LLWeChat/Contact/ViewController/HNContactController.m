@@ -9,6 +9,8 @@
 /************** 联系人 控制器 **************/
 
 #import "HNContactController.h"
+#import "HNContactAddController.h"              // 添加朋友控制器
+
 #import "HNContactModel.h"
 #import "HNTableViewCell.h"
 #import "HNContactManager.h"
@@ -36,6 +38,9 @@ UISearchBarDelegate
     self.title = @"通讯录";
     [self createView];
     [self getDataFromServer];  //  获取联系人列表
+    
+    // 有好友添加请求通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contactChangedNotification:) name:HNContactChangedNotification object:[HNContactManager sharedManager]];
 }
 
 
@@ -53,6 +58,18 @@ UISearchBarDelegate
 - (void)addFrame:(CGRect)frame{
 }
 
+#pragma mark - 好友 -
+
+// 有好友添加请求通知
+- (void)contactChangedNotification:(NSNotification *)notification {
+    [self getDataFromServer];
+}
+
+// 跳转添加朋友 控制器
+- (void)addFriend:(id)sender {
+    HNContactAddController *vc = [[HNContactAddController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma ----  服务区中获取数据  -----
 - (void)getDataFromServer{
@@ -112,6 +129,7 @@ UISearchBarDelegate
     // 清除 没有 联系人的 数组
     [sortedArray removeObjectsInArray:temp];
     
+    [self.sectionTitles insertObject:UITableViewIndexSearch atIndex:0];
     [self.dataArray addObjectsFromArray:sortedArray];
     [self.tableView reloadData];
 }
@@ -180,13 +198,13 @@ UISearchBarDelegate
         return nil;
     
     UIView *contentView = [[UIView alloc] init];
-    contentView.backgroundColor = self.tableView.backgroundColor;
+    contentView.backgroundColor = UIColorRGB(241, 240, 246);
     CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, height)];
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont systemFontOfSize:14];
 //    label.textColor = kLLTextColor_lightGray_system;
-    [label setText:[self.sectionTitles objectAtIndex:(section - 1)]];
+    [label setText:[self.sectionTitles objectAtIndex:(section)]];
     [contentView addSubview:label];
     return contentView;
 }
@@ -199,6 +217,9 @@ UISearchBarDelegate
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
+    if (index == 0) {
+        return  -1;
+    }
     return index;
 }
 
@@ -207,7 +228,7 @@ UISearchBarDelegate
 /*** view 属性 ***/
 - (UITableView*)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64) style:UITableViewStylePlain];
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
         _tableView.rowHeight = 56;
         _tableView.delegate = self;
@@ -216,7 +237,7 @@ UISearchBarDelegate
         _tableView.sectionIndexColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         [_tableView setLayoutMargins:UIEdgeInsetsZero];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
-        _tableView.contentInset = UIEdgeInsetsMake(0, 0, MAIN_BOTTOM_TABBAR_HEIGHT, 0);
+//        _tableView.contentInset = UIEdgeInsetsMake(0, 0, MAIN_BOTTOM_TABBAR_HEIGHT, 0);
     }
     return _tableView;
 }

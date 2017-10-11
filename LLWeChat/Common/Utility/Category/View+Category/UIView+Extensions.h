@@ -59,6 +59,7 @@ typedef NS_OPTIONS ( NSUInteger, Position){
 - (void)addBorderWithColor: (UIColor *) color andWidth:(CGFloat) borderWidth andPostion:(Position)position startPosition:(CGFloat)start lenght:(CGFloat)length;
 
 
+
 #pragma  获取 处理view等
 
 /** 

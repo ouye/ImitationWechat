@@ -50,6 +50,7 @@
 }
 
 
+
 /**设置 cell accessory 类型 (加入自定义类型)*/
 - (void)setAccessoryType_HN:(HNTableViewCellAccessoryType)accessoryType_HN{
     _accessoryType_HN = accessoryType_HN;

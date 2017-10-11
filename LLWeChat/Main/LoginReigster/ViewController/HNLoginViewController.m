@@ -102,6 +102,7 @@
         _accountView = [[LLAccoutElectTextFiledView alloc]init];
         _accountView.nameLabel.text = @"账号";
         _accountView.textfield.placeholder = @"请输入账号";
+        _accountView.textfield.text = @"18859291667";
         _accountView.textfield.delegate = self;
     }
     return _accountView;
@@ -113,6 +114,7 @@
         _secretView = [[LLAccoutElectTextFiledView alloc]init];
         _secretView.nameLabel.text = @"密码";
         _secretView.textfield.placeholder = @"请输入密码";
+        _secretView.textfield.text = @"123";
         _secretView.textfield.delegate = self;
     }
     return _secretView;
