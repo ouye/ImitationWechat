@@ -46,15 +46,15 @@
     
     
     
-    HNTabBarMainFourController *MainVC = [[HNTabBarMainFourController alloc]init];
-    self.view.window.rootViewController = MainVC;
+//    HNTabBarMainFourController *MainVC = [[HNTabBarMainFourController alloc]init];
+//    self.view.window.rootViewController = MainVC;
     
     //    [UIAlertController alertWithMessage:@"d" formVc:self Confirmed:nil];
     
-    [UIAlertController alertWithTitleClickWhiteToCancle:@"正确" message:@"爱情" comfirTitle:@"呵呵" formVc:self Confirmed:nil];
+//    [UIAlertController alertWithTitleClickWhiteToCancle:@"正确" message:@"爱情" comfirTitle:@"呵呵" formVc:self Confirmed:nil];
     
     
-    //    [[HNClientManager sharedManager] loginWithUsername:self.accountView.textfield.text password:self.secretView.textfield.text];
+    [[HNClientManager sharedManager] loginWithUsername:self.accountView.textfield.text password:self.secretView.textfield.text];
     
 }
 
