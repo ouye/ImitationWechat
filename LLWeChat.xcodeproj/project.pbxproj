@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E089BB21F7944A800EC26FD /* MBProgressHUD+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E089BB11F7944A800EC26FD /* MBProgressHUD+EXT.m */; };
+		5E2A2C4A1F8E71510010DCB1 /* HNContactDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A2C491F8E71510010DCB1 /* HNContactDetailsController.m */; };
 		5E3CBFD31F71587200445C65 /* AA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CBFC51F71587200445C65 /* AA.m */; };
 		5E3CBFD41F71587200445C65 /* BB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CBFC71F71587200445C65 /* BB.m */; };
 		5E3CBFD51F71587200445C65 /* CC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CBFC91F71587200445C65 /* CC.m */; };
@@ -139,6 +140,8 @@
 		5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLWeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E089BB01F7944A800EC26FD /* MBProgressHUD+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+EXT.h"; sourceTree = "<group>"; };
 		5E089BB11F7944A800EC26FD /* MBProgressHUD+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+EXT.m"; sourceTree = "<group>"; };
+		5E2A2C481F8E71510010DCB1 /* HNContactDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactDetailsController.h; sourceTree = "<group>"; };
+		5E2A2C491F8E71510010DCB1 /* HNContactDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactDetailsController.m; sourceTree = "<group>"; };
 		5E3CBFC41F71587200445C65 /* AA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AA.h; sourceTree = "<group>"; };
 		5E3CBFC51F71587200445C65 /* AA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AA.m; sourceTree = "<group>"; };
 		5E3CBFC61F71587200445C65 /* BB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BB.h; sourceTree = "<group>"; };
@@ -453,6 +456,8 @@
 		5E2A2C471F8E71130010DCB1 /* ContactDetailsController */ = {
 			isa = PBXGroup;
 			children = (
+				5E2A2C481F8E71510010DCB1 /* HNContactDetailsController.h */,
+				5E2A2C491F8E71510010DCB1 /* HNContactDetailsController.m */,
 			);
 			path = ContactDetailsController;
 			sourceTree = "<group>";
@@ -1322,6 +1327,7 @@
 				5E3CBFFF1F715A5000445C65 /* NSData+ImageContentType.m in Sources */,
 				5E3CC04C1F715C1A00445C65 /* UIScrollView+Extensions.m in Sources */,
 				5E8136F91F868BB6006F7533 /* HNTableViewCell.m in Sources */,
+				5E2A2C4A1F8E71510010DCB1 /* HNContactDetailsController.m in Sources */,
 				5E57C5B91F63BA8F00866330 /* LLAccoutElectTextFiledView.m in Sources */,
 				5EA71CE51F875CD200850CDB /* HNMeViewController.m in Sources */,
 				E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */,

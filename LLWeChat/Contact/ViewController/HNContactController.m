@@ -10,6 +10,7 @@
 
 #import "HNContactController.h"
 #import "HNContactAddController.h"              // 添加朋友控制器
+#import "HNContactDetailsController.h"          // 联系人 详细资料控制器
 #import "HNSearchBar.h"
 
 #import "HNContactModel.h"
@@ -181,8 +182,8 @@ UISearchBarDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
-
+    HNContactDetailsController  *ContactDetailVC = [[HNContactDetailsController alloc]init];
+    [self.navigationController pushViewController:ContactDetailVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
