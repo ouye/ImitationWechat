@@ -11,12 +11,13 @@
 #import "HNContactAddController.h"
 #import "HNTableViewCellData.h"
 #import "HNTableViewCell.h"
-
+#import "HNContactSearchView.h"
 
 @interface HNContactAddController ()<UITableViewDelegate, UITableViewDataSource>
 
 /*** view 属性 ***/
 @property (nonatomic, strong) UITableView                       *tableView;
+@property (nonatomic, strong) HNContactSearchView               *tableHeaderView;
 
 /*** 数据类型 属性 ***/
 @property (nonatomic, strong) NSArray<HNTableViewCellData *>    *dataSource;
@@ -98,9 +99,18 @@
         _tableView.sectionIndexColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         [_tableView setLayoutMargins:UIEdgeInsetsZero];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 13, 0, 0);
-        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+//        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+        _tableView.tableHeaderView = self.tableHeaderView;
     }
     return _tableView;
+}
+
+// tableHeaderView
+- (HNContactSearchView*)tableHeaderView{
+    if (!_tableHeaderView) {
+        _tableHeaderView = [[HNContactSearchView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScaleHeight(122))];
+    }
+    return _tableHeaderView;
 }
 
 /*** 数据类型 属性 ***/

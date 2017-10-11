@@ -10,6 +10,7 @@
 
 #import "HNContactController.h"
 #import "HNContactAddController.h"              // 添加朋友控制器
+#import "HNSearchBar.h"
 
 #import "HNContactModel.h"
 #import "HNTableViewCell.h"
@@ -22,7 +23,9 @@ UISearchBarDelegate
 >
 
 /*** view 属性 ***/
-@property (nonatomic, strong) UITableView                               *tableView;
+@property (nonatomic, strong) UITableView                           *tableView;
+@property (nonatomic, strong) UIView                                *tableHeaderView;
+@property (nonatomic, strong) HNSearchBar                           *searchBar;
 
 /*** 数据类型 属性 ***/
 @property (nonatomic, strong) NSMutableArray<NSMutableArray<HNContactModel *>*> *dataArray;
@@ -226,6 +229,7 @@ UISearchBarDelegate
 
 #pragma mark ----------------------- 懒加载 --------------------
 /*** view 属性 ***/
+// tableView
 - (UITableView*)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64) style:UITableViewStylePlain];
@@ -237,9 +241,29 @@ UISearchBarDelegate
         _tableView.sectionIndexColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         [_tableView setLayoutMargins:UIEdgeInsetsZero];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
+        _tableView.tableHeaderView = self.tableHeaderView;
 //        _tableView.contentInset = UIEdgeInsetsMake(0, 0, MAIN_BOTTOM_TABBAR_HEIGHT, 0);
     }
     return _tableView;
+}
+
+// searchBar
+- (HNSearchBar*)searchBar{
+    if (!_searchBar) {
+        _searchBar = [HNSearchBar defaultSearchBarWithFrame:CGRectMake(0, 0, ScreenWidth - 10, HNSearchBardefaultHeight + 16)];
+        _searchBar.delegate = self;
+        _searchBar.placeholder = @"搜索";
+    }
+    return _searchBar;
+}
+
+// tableHeaderView
+- (UIView*)tableHeaderView{
+    if (!_tableHeaderView) {
+        _tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.searchBar.height)];
+        [_tableHeaderView addSubview:self.searchBar];
+    }
+    return _tableHeaderView;
 }
 
 /*** 数据类型 属性 ***/

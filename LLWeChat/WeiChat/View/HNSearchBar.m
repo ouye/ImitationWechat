@@ -57,6 +57,9 @@
     UITextField *searchTextField = [searchBar searchTextField];
     searchTextField.backgroundColor = [UIColor whiteColor];
     searchTextField.textColor = [UIColor blackColor];
+    searchTextField.layer.borderWidth = 0.5;
+    searchTextField.layer.borderColor = [UIColor blackColor].CGColor;
+    searchTextField.layer.cornerRadius = 3;
     return searchBar;
 }
 

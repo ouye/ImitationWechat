@@ -13,22 +13,38 @@
 
 @implementation HNContactSearchView
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         [self createView];
+
     }
     return self;
 }
 
+
+
 #pragma ----- createView and addFrame -----
 - (void)createView{
     [self addSubview:self.weChatNumBagView];
-    [self addSubview:self.searchImageView];
-    [self addSubview:self.weChatNumLabel];
+    [_weChatNumBagView addSubview:self.searchImageView];
+    [_weChatNumBagView addSubview:self.weChatNumLabel];
     [self addSubview:self.myWeChatNumLabel];
     [self addSubview:self.myQRcodeImageView];
+}
+
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    _weChatNumBagView.frame = CGRectMake(0, ScaleHeight(15), ScreenWidth, ScaleHeight(47));
+    _searchImageView.frame = CGRectMake(ScaleWidth(22), 0, ScaleWidth(36), ScaleHeight(30));
+    _searchImageView.centerY = _weChatNumBagView.centerY;
+    _weChatNumLabel.frame = CGRectMake(_searchImageView.right+ScaleWidth(8), 0, ScaleWidth(220), _weChatNumBagView.height);
+    
+    _myWeChatNumLabel.frame = CGRectMake(ScaleWidth(100), _weChatNumBagView.bottom + ScaleHeight(10), HNLabelWith(_myWeChatNumLabel), HNLabelHight(_myWeChatNumLabel));
+    _myQRcodeImageView.frame = CGRectMake(_myWeChatNumLabel.right +ScaleWidth(10), _weChatNumBagView.bottom+ ScaleHeight(10), ScaleWidth(20),ScaleWidth(20));
+    _myQRcodeImageView.centerY = _myWeChatNumLabel.centerY;
 }
 
 
@@ -48,7 +64,7 @@
     if (!_searchImageView) {
         _searchImageView = [[UIImageView alloc]init];
         _searchImageView.contentMode = UIViewContentModeScaleAspectFit;
-        _myQRcodeImageView.image = [UIImage imageNamed:@"add_friend_searchicon"];
+        _searchImageView.image = [UIImage imageNamed:@"add_friend_searchicon"];
     }
     return _searchImageView;
 }
@@ -61,6 +77,7 @@
         _weChatNumLabel.textAlignment = NSTextAlignmentLeft;
         _weChatNumLabel.font = HNFont(15);
         _weChatNumLabel.textColor = UIColorRGB(146, 146, 146);
+        _weChatNumLabel.text = @"微信号/手机号";
     }
     return _weChatNumLabel;
 }
@@ -72,6 +89,7 @@
         _myWeChatNumLabel.textAlignment = NSTextAlignmentLeft;
         _myWeChatNumLabel.font = HNFont(14);
         _myWeChatNumLabel.textColor = UIColorRGB(19, 19, 20);
+        _myWeChatNumLabel.text = @"我的微信号";
     }
     return _myWeChatNumLabel;
 }
