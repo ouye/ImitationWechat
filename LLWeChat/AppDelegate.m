@@ -18,7 +18,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-        
+    
+    [self initializeSDK];
+
     //准备用户登录
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -59,7 +61,39 @@
 #pragma mark - View Controller
 
 
+#pragma mark - 初始化环信SDK
 
+- (void)initializeSDK {
+    
+    //#warning 初始化环信SDK
+    //#warning SDK注册 APNS文件的名字, 需要与后台上传证书时的名字一一对应
+    //#warning 本项目没有使用离线推送功能
+    NSString *apnsCertName = nil;
+#if DEBUG
+    apnsCertName = @"chatdemoui_dev";
+#else
+    apnsCertName = @"chatdemoui";
+#endif
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *appkey = [ud stringForKey:@"identifier_appkey"];
+    if (!appkey) {
+        appkey = EASE_MOB_APP_KEY;
+        [ud setObject:appkey forKey:@"identifier_appkey"];
+    }
+    
+    //初始化EMClient
+    EMOptions *options = [EMOptions optionsWithAppkey:appkey];
+    options.apnsCertName = apnsCertName;
+    options.isAutoAcceptGroupInvitation = NO;
+    options.isAutoAcceptFriendInvitation = NO;
+    options.isAutoLogin = YES;
+    options.enableConsoleLog = YES;
+    options.isSandboxMode = NO; //YES为SDK内部测试使用
+    
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+    
+}
 
 
 

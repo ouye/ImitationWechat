@@ -35,6 +35,7 @@ UISearchBarDelegate
     [super viewDidLoad];
     self.title = @"通讯录";
     [self createView];
+    [self getDataFromServer];  //  获取联系人列表
 }
 
 
@@ -203,6 +204,7 @@ UISearchBarDelegate
 
 
 #pragma mark ----------------------- 懒加载 --------------------
+/*** view 属性 ***/
 - (UITableView*)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64) style:UITableViewStyleGrouped];
@@ -211,6 +213,7 @@ UISearchBarDelegate
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+        _tableView.sectionIndexColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         [_tableView setLayoutMargins:UIEdgeInsetsZero];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
         _tableView.contentInset = UIEdgeInsetsMake(0, 0, MAIN_BOTTOM_TABBAR_HEIGHT, 0);
@@ -218,6 +221,21 @@ UISearchBarDelegate
     return _tableView;
 }
 
+/*** 数据类型 属性 ***/
+// 联系人数组
+- (NSMutableArray*)dataArray{
+    if (!_dataArray) {
+        _dataArray = [[NSMutableArray alloc]init];
+    }
+    return _dataArray;
+}
 
+//  A-Z和# 标注数组
+- (NSMutableArray*)sectionTitles{
+    if (!_sectionTitles) {
+        _sectionTitles = [[NSMutableArray alloc]init];
+    }
+    return _sectionTitles;
+}
 
 @end

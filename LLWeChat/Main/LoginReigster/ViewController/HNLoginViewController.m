@@ -46,8 +46,7 @@
     
     
     
-//    HNTabBarMainFourController *MainVC = [[HNTabBarMainFourController alloc]init];
-//    self.view.window.rootViewController = MainVC;
+
     
     //    [UIAlertController alertWithMessage:@"d" formVc:self Confirmed:nil];
     
@@ -55,6 +54,9 @@
     
     
     [[HNClientManager sharedManager] loginWithUsername:self.accountView.textfield.text password:self.secretView.textfield.text];
+    
+    HNTabBarMainFourController *MainVC = [[HNTabBarMainFourController alloc]init];
+    self.view.window.rootViewController = MainVC;
     
 }
 
