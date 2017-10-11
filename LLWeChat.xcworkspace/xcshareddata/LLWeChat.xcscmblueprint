@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "805B9F5C96D35070A8CCC7A6D832244629CA5B26",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7969F83B0CED90F6528E3FEE005C7433FF82DAA5" : 9223372036854775807,
+    "805B9F5C96D35070A8CCC7A6D832244629CA5B26" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "97EA8708-9E1D-46B9-BB8F-B21744C2F3B6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7969F83B0CED90F6528E3FEE005C7433FF82DAA5" : "ImitationWechat\/Pods\/",
+    "805B9F5C96D35070A8CCC7A6D832244629CA5B26" : "ImitationWechat\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LLWeChat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LLWeChat.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/18859291667\/ImitationWeChatPads.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7969F83B0CED90F6528E3FEE005C7433FF82DAA5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/18859291667\/ImitationWechat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "805B9F5C96D35070A8CCC7A6D832244629CA5B26"
+    }
+  ]
+}

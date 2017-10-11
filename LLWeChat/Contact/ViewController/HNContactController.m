@@ -38,6 +38,8 @@ UISearchBarDelegate
     [self createView];
 }
 
+
+
 #pragma mark ----------------------- CreateViewAndAddFrame --------------------
 
 //加载view

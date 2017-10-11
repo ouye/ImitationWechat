@@ -34,6 +34,9 @@
 }
 #pragma mark --------- CreateViewAndAddFrame ------------
 
+
+
+
 //加载view
 - (void)createView{
     

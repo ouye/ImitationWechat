@@ -1450,7 +1450,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/AMap",
 				);
-				GCC_PREFIX_HEADER = "/Users/chenwen/Desktop/环信微信/LLWeChat-master/LLWeChat/Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LLWeChat/Prefix.pch";
 				INFOPLIST_FILE = LLWeChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1481,7 +1481,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/AMap",
 				);
-				GCC_PREFIX_HEADER = "/Users/chenwen/Desktop/环信微信/LLWeChat-master/LLWeChat/Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LLWeChat/Prefix.pch";
 				INFOPLIST_FILE = LLWeChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
