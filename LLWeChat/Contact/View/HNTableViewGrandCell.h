@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, HNTableViewGrandCellStyle) {
     HNTableViewGrandCellStyleValueLeft,
     HNTableViewGrandCellStyleContactList,
     HNTableViewGrandCellStyleContactSearchList
+    
 };
 
 

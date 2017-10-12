@@ -43,7 +43,17 @@
 
 
 
+- (void)setStyle:(HNTableViewGrandCellStyle)style{
+    _style = style;
+    switch (style) {
+        case HNTableViewGrandCellStyleDefault:
+        case HNTableViewGrandCellStyleValue1:
+        case HNTableViewGrandCellStyleValue2:
+        case HNTableViewGrandCellStyleSubtitle:
+            break;
+        
 
+}
 
 
 
