@@ -133,6 +133,7 @@
 		E2863CCF1F8DAA630060D546 /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CCE1F8DAA630060D546 /* HNSearchBar.m */; };
 		E29F50FA1F8DF52500A030D8 /* HNContactAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50F91F8DF52500A030D8 /* HNContactAddController.m */; };
 		E29F50FE1F8E02CF00A030D8 /* HNContactSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */; };
+		E2C9501D1F8F3B6900973900 /* HNTableViewGrandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9501C1F8F3B6900973900 /* HNTableViewGrandCell.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -409,6 +410,8 @@
 		E29F50F91F8DF52500A030D8 /* HNContactAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactAddController.m; sourceTree = "<group>"; };
 		E29F50FC1F8E02CF00A030D8 /* HNContactSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactSearchView.h; sourceTree = "<group>"; };
 		E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactSearchView.m; sourceTree = "<group>"; };
+		E2C9501B1F8F3B6900973900 /* HNTableViewGrandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNTableViewGrandCell.h; sourceTree = "<group>"; };
+		E2C9501C1F8F3B6900973900 /* HNTableViewGrandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNTableViewGrandCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -797,6 +800,8 @@
 			children = (
 				5E8136F71F868BB6006F7533 /* HNTableViewCell.h */,
 				5E8136F81F868BB6006F7533 /* HNTableViewCell.m */,
+				E2C9501B1F8F3B6900973900 /* HNTableViewGrandCell.h */,
+				E2C9501C1F8F3B6900973900 /* HNTableViewGrandCell.m */,
 				E29F50FB1F8E029500A030D8 /* AddContactView */,
 			);
 			path = View;
@@ -1273,6 +1278,7 @@
 				5E3CBFD71F71587200445C65 /* HNLookPhotoVC.m in Sources */,
 				5E3CC0521F715C1A00445C65 /* LLUtils+Text.m in Sources */,
 				5EEA08701F7D42D40062460B /* MBProgressHUD.m in Sources */,
+				E2C9501D1F8F3B6900973900 /* HNTableViewGrandCell.m in Sources */,
 				5E3CC0441F715C1A00445C65 /* HNBaseViewController.m in Sources */,
 				5E3CC0571F71653A00445C65 /* UIViewController+Transition.m in Sources */,
 				E2863CC81F8DA76A0060D546 /* HNChatManager.m in Sources */,
