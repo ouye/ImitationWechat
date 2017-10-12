@@ -11,10 +11,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, HNTableViewCellStyle) {
-    HNTableViewCellStyleDefault = UITableViewCellStyleDefault,
-    HNTableViewCellStyleValue1 = UITableViewCellStyleValue1,
-    HNTableViewCellStyleValue2 = UITableViewCellStyleValue2,
-    HNTableViewCellStyleSubtitle = UITableViewCellStyleSubtitle,
+    HNTableViewCellStyleDefault = UITableViewCellStyleDefault,      // 左图 中字
+    HNTableViewCellStyleValue1 = UITableViewCellStyleValue1,        // 左图 中字  右字
+    HNTableViewCellStyleValue2 = UITableViewCellStyleValue2,        // 左图 中字1 中字2
+    HNTableViewCellStyleSubtitle = UITableViewCellStyleSubtitle,    // 左图 上字  下字
     
     HNTableViewCellStyleValueCenter = 1000,
     HNTableViewCellStyleValueLeft,

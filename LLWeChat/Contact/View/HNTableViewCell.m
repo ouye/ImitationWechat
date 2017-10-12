@@ -44,7 +44,6 @@
 //            cell.detailTextLabel.textColor = HNTextColor_lightGray_system;
             break;
     }
-    
     cell.style = style;
     return cell;
 }

@@ -11,17 +11,19 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, HNTableViewGrandCellStyle) {
-    HNTableViewGrandCellStyleDefault = UITableViewCellStyleDefault,
-    HNTableViewGrandCellStyleValue1 = UITableViewCellStyleValue1,
-    HNTableViewGrandCellStyleValue2 = UITableViewCellStyleValue2,
-    HNTableViewGrandCellStyleSubtitle = UITableViewCellStyleSubtitle,
+    // 修改的是父类的控件
+    HNTableViewGrandCellStyleDefault = UITableViewCellStyleDefault,         // 左图 中字
+    HNTableViewGrandCellStyleValue1 = UITableViewCellStyleValue1,           // 左图 中字  右字
+    HNTableViewGrandCellStyleValue2 = UITableViewCellStyleValue2,           // 左图 中字1 中字2
+    HNTableViewGrandCellStyleSubtitle = UITableViewCellStyleSubtitle,       // 左图 上字  下字
     
     HNTableViewGrandCellStyleValueCenter = 1000,
     HNTableViewGrandCellStyleValueLeft,
     HNTableViewGrandCellStyleContactList,
     HNTableViewGrandCellStyleContactSearchList,
     
-    HNLeftLabelTightTextFieldStyle
+    // 新增的控件
+    HNLeftLabelTightTextFieldStyle                                          // 做label 右 UITextField
     
 };
 

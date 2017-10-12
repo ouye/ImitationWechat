@@ -12,11 +12,9 @@
 #import "HNContactAddController.h"              // 添加朋友控制器
 #import "HNContactDetailsController.h"          // 联系人 详细资料控制器
 #import "HNSearchBar.h"
-#import "HNTableViewCell.h"
-
-#import "HNTableViewGrandCell.h"
 
 #import "HNContactModel.h"
+#import "HNTableViewCell.h"
 #import "HNContactManager.h"
 
 @interface HNContactController ()<
@@ -158,32 +156,27 @@ UISearchBarDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *HNTableViewCellID = @"tableViewCellStyleContactListID";
-    HNTableViewGrandCell *cell = [tableView createHNTableViewGrandCellWithStyle:HNLeftLabelTightTextFieldStyle reuseIdentifier:HNTableViewCellID];
-    if (indexPath.section > 0) {
-        HNContactModel *userModel = self.dataArray[indexPath.section - 1][indexPath.row];
-        
-        cell.leftLabel.text = userModel.userName;
-    }
-   
+    HNTableViewCell *cell = [tableView createHNTableViewCellWithStyle:HNTableViewCellStyleContactList reuseIdentifier:HNTableViewCellID];
     
-//    if (indexPath.section == 0) {
-//        if (indexPath.row == 0) {
-//            cell.textLabel.text = @"新的朋友";
-//            cell.imageView.image = [UIImage imageNamed:@"plugins_FriendNotify"];
-//        }else if (indexPath.row == 1) {
-//            cell.textLabel.text = @"群聊";
-//            cell.imageView.image = [UIImage imageNamed:@"add_friend_icon_addgroup"];
-//        }else if (indexPath.row == 2) {
-//            cell.textLabel.text = @"标签";
-//            cell.imageView.image = [UIImage imageNamed:@"Contact_icon_ContactTag"];
-//        }else if (indexPath.row == 3) {
-//            cell.textLabel.text = @"公众号";
-//            cell.imageView.image = [UIImage imageNamed:@"add_friend_icon_offical"];
-//        }
-//    }else {
-//        cell.textLabel.text = userModel.userName;
-//        cell.imageView.image = userModel.avatarImage;
-//    }
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"新的朋友";
+            cell.imageView.image = [UIImage imageNamed:@"plugins_FriendNotify"];
+        }else if (indexPath.row == 1) {
+            cell.textLabel.text = @"群聊";
+            cell.imageView.image = [UIImage imageNamed:@"add_friend_icon_addgroup"];
+        }else if (indexPath.row == 2) {
+            cell.textLabel.text = @"标签";
+            cell.imageView.image = [UIImage imageNamed:@"Contact_icon_ContactTag"];
+        }else if (indexPath.row == 3) {
+            cell.textLabel.text = @"公众号";
+            cell.imageView.image = [UIImage imageNamed:@"add_friend_icon_offical"];
+        }
+    }else {
+        HNContactModel *userModel = self.dataArray[indexPath.section - 1][indexPath.row];
+        cell.textLabel.text = userModel.userName;
+        cell.imageView.image = userModel.avatarImage;
+    }
     return cell;
 }
 
