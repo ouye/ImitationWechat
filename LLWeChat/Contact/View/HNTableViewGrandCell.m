@@ -14,6 +14,7 @@
 
 @property (nonatomic, assign) HNTableViewGrandCellStyle          style;
 
+
 @end
 
 @implementation HNTableViewGrandCell
@@ -36,6 +37,12 @@
         case HNTableViewGrandCellStyleContactSearchList:
             cell = [[HNTableViewGrandCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
             break;
+        
+        case  HNLeftLabelTightTextFieldStyle:
+            cell = [[HNTableViewGrandCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+            break;
+        default:
+            break;
         }
     cell.style = style;
     return cell;
@@ -51,12 +58,53 @@
         case HNTableViewGrandCellStyleValue2:
         case HNTableViewGrandCellStyleSubtitle:
             break;
+        case HNLeftLabelTightTextFieldStyle:{
+            
+            [self.contentView addSubview:self.leftLabel];
+            [self.contentView addSubview:self.textField];
+        }break;
+        default:
+            break;
         
-
+    }
 }
 
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    switch (self.style) {
+        case HNTableViewGrandCellStyleDefault:
+        case HNTableViewGrandCellStyleValue1:
+        case HNTableViewGrandCellStyleValue2:
+        case HNTableViewGrandCellStyleSubtitle:
+            break;
+        case HNLeftLabelTightTextFieldStyle:{
+            
+            _leftLabel.frame = CGRectMake(10, 8, 50, 20);
+            _textField.frame = CGRectMake(_leftLabel.right+10, 8, 100, 20);
 
+            
+        }break;
+        default:
+            break;
+    }
+}
+
+// textField
+- (UITextField*)textField{
+    if (!_textField) {
+        _textField = [[UITextField alloc]init];
+    }
+    return _textField;
+}
+
+// leftLabel
+- (UILabel*)leftLabel{
+    if (!_leftLabel) {
+        _leftLabel = [[UILabel alloc]init];
+    }
+    return _leftLabel;
+}
 
 
 

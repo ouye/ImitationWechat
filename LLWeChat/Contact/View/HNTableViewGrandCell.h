@@ -19,12 +19,18 @@ typedef NS_ENUM(NSInteger, HNTableViewGrandCellStyle) {
     HNTableViewGrandCellStyleValueCenter = 1000,
     HNTableViewGrandCellStyleValueLeft,
     HNTableViewGrandCellStyleContactList,
-    HNTableViewGrandCellStyleContactSearchList
+    HNTableViewGrandCellStyleContactSearchList,
+    
+    HNLeftLabelTightTextFieldStyle
     
 };
 
 
 @interface HNTableViewGrandCell : UITableViewCell
+
+
+@property (nonatomic, strong) UILabel                            *leftLabel;  // leftLabel
+@property (nonatomic, strong) UITextField                        *textField;  // textField
 
 @end
 
