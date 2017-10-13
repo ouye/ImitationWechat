@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setFullScreenSideslip];
+    [self setFullScreenSideslip];   //  屏蔽这个话 及关闭全屏侧滑功能
 
     //   设置TabBar item字体颜色方式  此方法可以去子控制器 使用  这里统一设置
     [self setTabBarItemTextColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
