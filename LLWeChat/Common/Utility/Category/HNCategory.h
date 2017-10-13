@@ -18,5 +18,7 @@
 #import "NSString+Extensions.h"
 #import "UIAlertController+Extensions.h"
 #import "UILabel+Extensions.h"
+#import "UILabel+Extensions.h"
+#import "UIViewController+Extension.h"
 
 #endif /* HNCategory_h */

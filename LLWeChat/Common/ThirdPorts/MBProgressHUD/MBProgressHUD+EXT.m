@@ -45,7 +45,7 @@
 
 /** 显示加载进度 圈圈提示 */
 + (void)showProgress{
-    [self show:@"加载中..." font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
+    [self show:nil font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
 }
 + (void)showProgress:(NSString *)msg{
     [self show:msg font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
@@ -71,7 +71,7 @@
  */
 + (void)show:(NSString *)text font:(UIFont*)font textColor:(UIColor*)textColor bagColor:(UIColor*)color dimBackground:(BOOL)dim Margin:(CGFloat)margin icon:(NSString *)icon view:(UIView *)view mode:(MBProgressMode )myMode afterDelay:(CGFloat)delay{
     
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIViewController topViewController].view;
     
     //如果已有弹框，先消失
     [MBProgressHUD hideHUDForView:view animated:YES];
@@ -88,7 +88,7 @@
     progressHUD.dimBackground = dim;
     
     // 提示框背景颜色      框架 默认 [UIColor blackColor]
-    progressHUD.color = color?color:[UIColor blackColor];
+    progressHUD.color = color?color:nil;
     
     // 提示框边界大小      20.f框架默认值
     CGFloat defutMargin = margin>0?margin:20.0f;
