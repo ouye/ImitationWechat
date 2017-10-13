@@ -13,18 +13,18 @@
 
 /** 显示成功提示 */
 + (void)showSuccess:(NSString *)success{
-    [self show:success font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:@"success.png" view:nil mode:MBProgressModeSuccess afterDelay:0];
+    [self show:success font:nil textColor:nil bagColor:nil dimBackground:NO userTouch:NO Margin:0 icon:@"success.png" view:nil mode:MBProgressModeSuccess afterDelay:0];
 }
 + (void)showSuccess:(NSString *)success icon:(NSString*)icon{
-    [self show:success font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:icon?icon:@"success.png" view:nil mode:MBProgressModeSuccess afterDelay:0];
+    [self show:success font:nil textColor:nil bagColor:nil dimBackground:NO userTouch:NO Margin:0 icon:icon?icon:@"success.png" view:nil mode:MBProgressModeSuccess afterDelay:0];
 }
 
 /** 显示错误提示 */
 + (void)showError:(NSString *)error{
-    [self show:error font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:@"error.png" view:nil mode:MBProgressModeCustom afterDelay:0];
+    [self show:error font:nil textColor:nil bagColor:nil dimBackground:nil userTouch:NO Margin:0 icon:@"error.png" view:nil mode:MBProgressModeCustom afterDelay:0];
 }
 + (void)showError:(NSString *)error icon:(NSString*)icon{
-    [self show:error font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:icon?icon:@"error.png" view:nil mode:MBProgressModeCustom afterDelay:0];
+    [self show:error font:nil textColor:nil bagColor:nil dimBackground:nil userTouch:NO Margin:0 icon:icon?icon:@"error.png" view:nil mode:MBProgressModeCustom afterDelay:0];
 }
 
 
@@ -37,7 +37,7 @@
 
 /** 提示文字 */
 + (void)showMessage:(NSString *)message{
-    [self show:message font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:nil view:nil mode:MBProgressModeOnlyText afterDelay:0];
+    [self show:message font:nil textColor:nil bagColor:nil dimBackground:nil userTouch:NO Margin:0 icon:nil view:nil mode:MBProgressModeOnlyText afterDelay:0];
 }
 
 
@@ -45,10 +45,10 @@
 
 /** 显示加载进度 圈圈提示 */
 + (void)showProgress{
-    [self show:nil font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
+    [self show:nil font:nil textColor:nil bagColor:nil dimBackground:NO userTouch:NO Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
 }
 + (void)showProgress:(NSString *)msg{
-    [self show:msg font:nil textColor:nil bagColor:nil dimBackground:nil Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
+    [self show:msg font:nil textColor:nil bagColor:nil dimBackground:NO userTouch:NO Margin:0 icon:nil view:nil mode:MBProgressModeLoading afterDelay:10];
 }
 
 
@@ -62,6 +62,7 @@
  *  @param  textColor       提示字体颜色        想默认 填 nil    [UIColor whiteColor]
  *  @param  color           提示框背景颜色       想默认 填 nil    [UIColor blackColor]
  *  @param  dimBackground   是否显示全屏幕背景
+ *  @param  isTouch         MBProgressHUD显示后 是否影响其他地方的交互。 默认不影响
  *  @param  margin          提示框边界大小       想默认 填 0    20.f框架默认值
  *  @param  icon            MBProgressHUDModeCustomView 模式下 自定义图片
  *  @param  view            显示的view
@@ -69,7 +70,7 @@
  *  @param  delay           显示的消失时间      想默认 填 0     1秒 默认
  *
  */
-+ (void)show:(NSString *)text font:(UIFont*)font textColor:(UIColor*)textColor bagColor:(UIColor*)color dimBackground:(BOOL)dim Margin:(CGFloat)margin icon:(NSString *)icon view:(UIView *)view mode:(MBProgressMode )myMode afterDelay:(CGFloat)delay{
++ (void)show:(NSString *)text font:(UIFont*)font textColor:(UIColor*)textColor bagColor:(UIColor*)color dimBackground:(BOOL)dim userTouch:(BOOL)isTouch Margin:(CGFloat)margin icon:(NSString *)icon view:(UIView *)view mode:(MBProgressMode )myMode afterDelay:(CGFloat)delay{
     
     if (view == nil) view = [UIViewController topViewController].view;
     
@@ -86,6 +87,9 @@
     
     // 是否全屏幕透明背景
     progressHUD.dimBackground = dim;
+    
+    // MBProgressHUD显示后 不影响其他交互
+    progressHUD.userInteractionEnabled = isTouch;
     
     // 提示框背景颜色      框架 默认 [UIColor blackColor]
     progressHUD.color = color?color:nil;
