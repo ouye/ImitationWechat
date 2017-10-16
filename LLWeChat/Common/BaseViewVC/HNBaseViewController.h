@@ -21,7 +21,7 @@
 - (void)setFullScreenSideslip;
 
 /**
- *  删除全屏侧滑返回 功能 恢复原生的 半屏侧滑
+ *  删除全屏侧滑返回 功能 恢复原生的 半屏侧滑  在子类中 执行 此方式 该子类控制器就 删除啦 全屏侧滑功能
  */
 - (void)deleteFullScreenSideslip;
 
