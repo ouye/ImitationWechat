@@ -67,8 +67,6 @@
 		5EA71CF01F87768800850CDB /* HNUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71CEF1F87768800850CDB /* HNUserProfile.m */; };
 		5EA71CF31F8778DF00850CDB /* HNUserGeneralOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71CF21F8778DF00850CDB /* HNUserGeneralOptions.m */; };
 		5EA71CF61F877AD300850CDB /* HNDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71CF51F877AD300850CDB /* HNDiscoveryController.m */; };
-		5EA71CF91F877D8400850CDB /* HNConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71CF81F877D8400850CDB /* HNConversationListController.m */; };
-		5EA71CFC1F8780A100850CDB /* HNConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71CFB1F8780A100850CDB /* HNConversationListCell.m */; };
 		5EA71CFF1F87D60100850CDB /* HNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71CFE1F87D60100850CDB /* HNLoginViewController.m */; };
 		5EA71D051F888EAA00850CDB /* UILabel+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA71D041F888EAA00850CDB /* UILabel+Extensions.m */; };
 		5EA71D091F889C5E00850CDB /* 手机尺寸图.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA71D081F889C5E00850CDB /* 手机尺寸图.png */; };
@@ -80,8 +78,6 @@
 		5EE37BCF1F740FBE00ACA971 /* HNExampleViewControoler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE37BCE1F740FBE00ACA971 /* HNExampleViewControoler.m */; };
 		5EEA08701F7D42D40062460B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA086E1F7D42D40062460B /* MBProgressHUD.m */; };
 		5EEA08731F7D4C160062460B /* UIAlertController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA08721F7D4C160062460B /* UIAlertController+Extensions.m */; };
-		5EF440811F80846D00DC5E9D /* HNConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF440801F80846D00DC5E9D /* HNConversationModel.m */; };
-		5EF440841F80876200DC5E9D /* HNMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF440831F80876200DC5E9D /* HNMessageModel.m */; };
 		DD066A6A1D5306A2009EB4BC /* Emotion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD066A691D5306A2009EB4BC /* Emotion.bundle */; };
 		DD0B87941D4B237700FD896D /* Emotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0B87931D4B237700FD896D /* Emotions.plist */; };
 		DD143F881D936F1900706DEA /* network_setting.html in Resources */ = {isa = PBXBuildFile; fileRef = DD143F861D936F1900706DEA /* network_setting.html */; };
@@ -130,12 +126,16 @@
 		E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC01F8DA76A0060D546 /* HNContactManager.m */; };
 		E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC21F8DA76A0060D546 /* HNPushOptions.m */; };
 		E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC51F8DA76A0060D546 /* HNSDKError.m */; };
-		E2863CCF1F8DAA630060D546 /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CCE1F8DAA630060D546 /* HNSearchBar.m */; };
 		E29F50FA1F8DF52500A030D8 /* HNContactAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50F91F8DF52500A030D8 /* HNContactAddController.m */; };
 		E29F50FE1F8E02CF00A030D8 /* HNContactSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */; };
 		E2C9501D1F8F3B6900973900 /* HNTableViewGrandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9501C1F8F3B6900973900 /* HNTableViewGrandCell.m */; };
 		E2EA23251F90C48400CCF95C /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EA23241F90C48400CCF95C /* UIViewController+Extension.m */; };
 		E2F07DAB1F949575008D4DDB /* HNPersonalDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DAA1F949575008D4DDB /* HNPersonalDetailsCell.m */; };
+		E2F07DBC1F94A84F008D4DDB /* HNConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB11F94A84F008D4DDB /* HNConversationModel.m */; };
+		E2F07DBD1F94A84F008D4DDB /* HNMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB31F94A84F008D4DDB /* HNMessageModel.m */; };
+		E2F07DBE1F94A84F008D4DDB /* HNConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */; };
+		E2F07DBF1F94A84F008D4DDB /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */; };
+		E2F07DC01F94A84F008D4DDB /* HNConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -264,10 +264,6 @@
 		5EA71CF21F8778DF00850CDB /* HNUserGeneralOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNUserGeneralOptions.m; sourceTree = "<group>"; };
 		5EA71CF41F877AD300850CDB /* HNDiscoveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNDiscoveryController.h; sourceTree = "<group>"; };
 		5EA71CF51F877AD300850CDB /* HNDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNDiscoveryController.m; sourceTree = "<group>"; };
-		5EA71CF71F877D8400850CDB /* HNConversationListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationListController.h; sourceTree = "<group>"; };
-		5EA71CF81F877D8400850CDB /* HNConversationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationListController.m; sourceTree = "<group>"; };
-		5EA71CFA1F8780A100850CDB /* HNConversationListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationListCell.h; sourceTree = "<group>"; };
-		5EA71CFB1F8780A100850CDB /* HNConversationListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationListCell.m; sourceTree = "<group>"; };
 		5EA71CFD1F87D60100850CDB /* HNLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNLoginViewController.h; sourceTree = "<group>"; };
 		5EA71CFE1F87D60100850CDB /* HNLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNLoginViewController.m; sourceTree = "<group>"; };
 		5EA71D031F888EAA00850CDB /* UILabel+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extensions.h"; sourceTree = "<group>"; };
@@ -292,10 +288,6 @@
 		5EEA086F1F7D42D40062460B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		5EEA08711F7D4C160062460B /* UIAlertController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Extensions.h"; sourceTree = "<group>"; };
 		5EEA08721F7D4C160062460B /* UIAlertController+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Extensions.m"; sourceTree = "<group>"; };
-		5EF4407F1F80846D00DC5E9D /* HNConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationModel.h; sourceTree = "<group>"; };
-		5EF440801F80846D00DC5E9D /* HNConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationModel.m; sourceTree = "<group>"; };
-		5EF440821F80876200DC5E9D /* HNMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNMessageModel.h; sourceTree = "<group>"; };
-		5EF440831F80876200DC5E9D /* HNMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNMessageModel.m; sourceTree = "<group>"; };
 		B6C0C7A09CD3E4989302934C /* Pods-LLWeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLWeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLWeChat/Pods-LLWeChat.debug.xcconfig"; sourceTree = "<group>"; };
 		CBC7CF59220255CFF7FFF604 /* Pods-LLWeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLWeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLWeChat/Pods-LLWeChat.release.xcconfig"; sourceTree = "<group>"; };
 		DD066A691D5306A2009EB4BC /* Emotion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emotion.bundle; sourceTree = "<group>"; };
@@ -406,8 +398,6 @@
 		E2863CC51F8DA76A0060D546 /* HNSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSDKError.m; sourceTree = "<group>"; };
 		E2863CC61F8DA76A0060D546 /* HNSDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKErrorCode.h; sourceTree = "<group>"; };
 		E2863CC71F8DA76A0060D546 /* HNSDKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKType.h; sourceTree = "<group>"; };
-		E2863CCD1F8DAA630060D546 /* HNSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchBar.h; sourceTree = "<group>"; };
-		E2863CCE1F8DAA630060D546 /* HNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchBar.m; sourceTree = "<group>"; };
 		E29F50F81F8DF52500A030D8 /* HNContactAddController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactAddController.h; sourceTree = "<group>"; };
 		E29F50F91F8DF52500A030D8 /* HNContactAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactAddController.m; sourceTree = "<group>"; };
 		E29F50FC1F8E02CF00A030D8 /* HNContactSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactSearchView.h; sourceTree = "<group>"; };
@@ -418,6 +408,16 @@
 		E2EA23241F90C48400CCF95C /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		E2F07DA91F949575008D4DDB /* HNPersonalDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNPersonalDetailsCell.h; sourceTree = "<group>"; };
 		E2F07DAA1F949575008D4DDB /* HNPersonalDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNPersonalDetailsCell.m; sourceTree = "<group>"; };
+		E2F07DB01F94A84F008D4DDB /* HNConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationModel.h; sourceTree = "<group>"; };
+		E2F07DB11F94A84F008D4DDB /* HNConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationModel.m; sourceTree = "<group>"; };
+		E2F07DB21F94A84F008D4DDB /* HNMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNMessageModel.h; sourceTree = "<group>"; };
+		E2F07DB31F94A84F008D4DDB /* HNMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNMessageModel.m; sourceTree = "<group>"; };
+		E2F07DB51F94A84F008D4DDB /* HNConversationListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationListCell.h; sourceTree = "<group>"; };
+		E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationListCell.m; sourceTree = "<group>"; };
+		E2F07DB71F94A84F008D4DDB /* HNSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchBar.h; sourceTree = "<group>"; };
+		E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchBar.m; sourceTree = "<group>"; };
+		E2F07DBA1F94A84F008D4DDB /* HNConversationListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationListController.h; sourceTree = "<group>"; };
+		E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -723,16 +723,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		5E70947A1F619B9C0072FFE1 /* WeiChat */ = {
-			isa = PBXGroup;
-			children = (
-				5E70947E1F619C620072FFE1 /* ViewController */,
-				5E70947F1F619C850072FFE1 /* View */,
-				5E7094811F619CB30072FFE1 /* Model */,
-			);
-			path = WeiChat;
-			sourceTree = "<group>";
-		};
 		5E70947B1F619C0A0072FFE1 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
@@ -761,37 +751,6 @@
 				5E7094881F619D0F0072FFE1 /* Model */,
 			);
 			path = ME;
-			sourceTree = "<group>";
-		};
-		5E70947E1F619C620072FFE1 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5EA71CF71F877D8400850CDB /* HNConversationListController.h */,
-				5EA71CF81F877D8400850CDB /* HNConversationListController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		5E70947F1F619C850072FFE1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5EA71CFA1F8780A100850CDB /* HNConversationListCell.h */,
-				5EA71CFB1F8780A100850CDB /* HNConversationListCell.m */,
-				E2863CCD1F8DAA630060D546 /* HNSearchBar.h */,
-				E2863CCE1F8DAA630060D546 /* HNSearchBar.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5E7094811F619CB30072FFE1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5EF4407F1F80846D00DC5E9D /* HNConversationModel.h */,
-				5EF440801F80846D00DC5E9D /* HNConversationModel.m */,
-				5EF440821F80876200DC5E9D /* HNMessageModel.h */,
-				5EF440831F80876200DC5E9D /* HNMessageModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5E7094821F619CC90072FFE1 /* Model */ = {
@@ -1044,8 +1003,8 @@
 			isa = PBXGroup;
 			children = (
 				5E57C5B01F63BA8F00866330 /* Main */,
-				5E70947A1F619B9C0072FFE1 /* WeiChat */,
 				5E70947B1F619C0A0072FFE1 /* Contact */,
+				E2F07DAE1F94A84F008D4DDB /* WeChat */,
 				5E70947C1F619C2A0072FFE1 /* Discovery */,
 				5E70947D1F619C3F0072FFE1 /* ME */,
 				E2863CB91F8DA7610060D546 /* Server */,
@@ -1149,6 +1108,47 @@
 				E2F07DAA1F949575008D4DDB /* HNPersonalDetailsCell.m */,
 			);
 			path = ContactDetailsView;
+			sourceTree = "<group>";
+		};
+		E2F07DAE1F94A84F008D4DDB /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				E2F07DAF1F94A84F008D4DDB /* Model */,
+				E2F07DB41F94A84F008D4DDB /* View */,
+				E2F07DB91F94A84F008D4DDB /* ViewController */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		E2F07DAF1F94A84F008D4DDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2F07DB01F94A84F008D4DDB /* HNConversationModel.h */,
+				E2F07DB11F94A84F008D4DDB /* HNConversationModel.m */,
+				E2F07DB21F94A84F008D4DDB /* HNMessageModel.h */,
+				E2F07DB31F94A84F008D4DDB /* HNMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2F07DB41F94A84F008D4DDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2F07DB51F94A84F008D4DDB /* HNConversationListCell.h */,
+				E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */,
+				E2F07DB71F94A84F008D4DDB /* HNSearchBar.h */,
+				E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2F07DB91F94A84F008D4DDB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E2F07DBA1F94A84F008D4DDB /* HNConversationListController.h */,
+				E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1290,7 +1290,6 @@
 			files = (
 				5E3CC0471F715C1A00445C65 /* NSString+Extensions.m in Sources */,
 				5E3CC00B1F715A5000445C65 /* UIImageView+HighlightedWebCache.m in Sources */,
-				5EF440811F80846D00DC5E9D /* HNConversationModel.m in Sources */,
 				5E3CC05A1F7166E600445C65 /* AnimatedTransitioning.m in Sources */,
 				DD8C48641D3A40BC003DF258 /* main.m in Sources */,
 				5E3CBFD71F71587200445C65 /* HNLookPhotoVC.m in Sources */,
@@ -1305,7 +1304,6 @@
 				E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */,
 				5EA71CF61F877AD300850CDB /* HNDiscoveryController.m in Sources */,
 				5E3CBFD81F71587200445C65 /* HNPhotoView.m in Sources */,
-				5EA71CFC1F8780A100850CDB /* HNConversationListCell.m in Sources */,
 				E2F07DAB1F949575008D4DDB /* HNPersonalDetailsCell.m in Sources */,
 				5E3CC0071F715A5000445C65 /* UIButton+WebCache.m in Sources */,
 				5E4122E08811E0EBB5AA4DC2 /* AppDelegate.m in Sources */,
@@ -1330,11 +1328,13 @@
 				5E3CC04B1F715C1A00445C65 /* UIImage+Extensions.m in Sources */,
 				5EA71CFF1F87D60100850CDB /* HNLoginViewController.m in Sources */,
 				5E3CC0491F715C1A00445C65 /* UICollectionView+Extensions.m in Sources */,
+				E2F07DBE1F94A84F008D4DDB /* HNConversationListCell.m in Sources */,
 				5E3CC0011F715A5000445C65 /* SDWebImageCompat.m in Sources */,
-				E2863CCF1F8DAA630060D546 /* HNSearchBar.m in Sources */,
+				E2F07DC01F94A84F008D4DDB /* HNConversationListController.m in Sources */,
 				5E3CC0031F715A5000445C65 /* SDWebImageDownloader.m in Sources */,
 				5EA71CF01F87768800850CDB /* HNUserProfile.m in Sources */,
 				5E3CC0041F715A5000445C65 /* SDWebImageDownloaderOperation.m in Sources */,
+				E2F07DBD1F94A84F008D4DDB /* HNMessageModel.m in Sources */,
 				5E3CC04E1F715C1A00445C65 /* UIView+Extensions.m in Sources */,
 				5E3CC0021F715A5000445C65 /* SDWebImageDecoder.m in Sources */,
 				5E3CC0051F715A5000445C65 /* SDWebImageManager.m in Sources */,
@@ -1343,7 +1343,6 @@
 				5E3CC0451F715C1A00445C65 /* NSDate+Extensions.m in Sources */,
 				5EA71CE81F875D4500850CDB /* HNTableViewCellData.m in Sources */,
 				5EDE89F11F65908400E64B2A /* LLMainViewController.m in Sources */,
-				5EA71CF91F877D8400850CDB /* HNConversationListController.m in Sources */,
 				5E3CBFFE1F715A5000445C65 /* MKAnnotationView+WebCache.m in Sources */,
 				5E089BB21F7944A800EC26FD /* MBProgressHUD+EXT.m in Sources */,
 				5EA71D131F88CD0700850CDB /* HNTabBarMainFourController.m in Sources */,
@@ -1358,13 +1357,14 @@
 				5EA71CE51F875CD200850CDB /* HNMeViewController.m in Sources */,
 				E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */,
 				5E3CC00A1F715A5000445C65 /* UIImage+WebP.m in Sources */,
+				E2F07DBC1F94A84F008D4DDB /* HNConversationModel.m in Sources */,
 				5EEA08731F7D4C160062460B /* UIAlertController+Extensions.m in Sources */,
 				5EAF8FDA1F716E3F0004A4C9 /* TransitionConst.m in Sources */,
-				5EF440841F80876200DC5E9D /* HNMessageModel.m in Sources */,
 				5E3CC0431F715C1A00445C65 /* HNBaseNavigationController.m in Sources */,
 				5E3CBFD91F71587200445C65 /* PresentTransition.m in Sources */,
 				5E3CC0501F715C1A00445C65 /* LLUtils+CGHelper.m in Sources */,
 				5E3CC0461F715C1A00445C65 /* NSString+Encrypt.m in Sources */,
+				E2F07DBF1F94A84F008D4DDB /* HNSearchBar.m in Sources */,
 				5EA71D0F1F88CC7900850CDB /* HNBaseTabBarController.m in Sources */,
 				5EA71CF31F8778DF00850CDB /* HNUserGeneralOptions.m in Sources */,
 				5EA71CEB1F8761AE00850CDB /* HNTableViewMeCell.m in Sources */,

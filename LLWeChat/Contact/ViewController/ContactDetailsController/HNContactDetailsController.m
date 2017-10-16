@@ -30,13 +30,10 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-
 }
 
 
-
 #pragma mark ----------- TableView delegate -----------
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2 ;
 }
@@ -66,7 +63,7 @@ UITableViewDataSource
 }
 
 
-#pragma mark ----------------------- 懒加载 --------------------
+#pragma mark ----------------- 懒加载 --------------------
 /*** view 属性 ***/
 // tableView
 - (UITableView*)tableView{
