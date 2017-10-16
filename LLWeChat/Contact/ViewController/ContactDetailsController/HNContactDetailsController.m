@@ -53,9 +53,7 @@ UITableViewDataSource
             HNTableViewCell     *cell = [tableView createHNTableViewCellWithStyle:HNTableViewCellStyleValueLeft reuseIdentifier:@"HNTableViewCellID"];
             cell.accessoryType_HN = HNTableViewCellAccessoryDisclosureIndicator;
             return cell;
-
         }break;
-            
         default:
             break;
     }
