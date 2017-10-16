@@ -11,6 +11,7 @@
 #import "HNContactDetailsController.h"
 #import "HNPersonalDetailsCell.h"
 #import "HNTableViewCell.h"
+#import "WRNavigationBar.h"
 
 @interface HNContactDetailsController ()<
 UITableViewDelegate,
@@ -29,6 +30,11 @@ UITableViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    [self wr_setNavBarBarTintColor:[UIColor redColor]];
+    [self wr_setNavBarBackgroundAlpha:1];
+
     [self.view addSubview:self.tableView];
 }
 

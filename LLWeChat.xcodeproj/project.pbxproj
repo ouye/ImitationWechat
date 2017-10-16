@@ -136,6 +136,7 @@
 		E2F07DBE1F94A84F008D4DDB /* HNConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */; };
 		E2F07DBF1F94A84F008D4DDB /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */; };
 		E2F07DC01F94A84F008D4DDB /* HNConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */; };
+		E2F07DCB1F94BA3A008D4DDB /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -418,6 +419,8 @@
 		E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchBar.m; sourceTree = "<group>"; };
 		E2F07DBA1F94A84F008D4DDB /* HNConversationListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationListController.h; sourceTree = "<group>"; };
 		E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationListController.m; sourceTree = "<group>"; };
+		E2F07DC91F94BA3A008D4DDB /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				5EEA086A1F7D33280062460B /* ThirdPort.h */,
+				E2F07DC81F94BA3A008D4DDB /* WRNavigationBar */,
 				5E3CC00E1F715C0F00445C65 /* MBProgressHUD */,
 				5E3CBFDC1F715A5000445C65 /* SDWebImage */,
 			);
@@ -1151,6 +1155,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		E2F07DC81F94BA3A008D4DDB /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				E2F07DC91F94BA3A008D4DDB /* WRNavigationBar.h */,
+				E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1344,6 +1357,7 @@
 				5EA71CE81F875D4500850CDB /* HNTableViewCellData.m in Sources */,
 				5EDE89F11F65908400E64B2A /* LLMainViewController.m in Sources */,
 				5E3CBFFE1F715A5000445C65 /* MKAnnotationView+WebCache.m in Sources */,
+				E2F07DCB1F94BA3A008D4DDB /* WRNavigationBar.m in Sources */,
 				5E089BB21F7944A800EC26FD /* MBProgressHUD+EXT.m in Sources */,
 				5EA71D131F88CD0700850CDB /* HNTabBarMainFourController.m in Sources */,
 				5E3CC0091F715A5000445C65 /* UIImage+MultiFormat.m in Sources */,
