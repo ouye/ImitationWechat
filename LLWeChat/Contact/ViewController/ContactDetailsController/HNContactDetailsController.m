@@ -9,8 +9,19 @@
 /************** 联系人 详细资料控制器 **************/
 
 #import "HNContactDetailsController.h"
+#import "HNPersonalDetailsCell.h"
+#import "HNTableViewCell.h"
 
-@interface HNContactDetailsController ()
+@interface HNContactDetailsController ()<
+UITableViewDelegate,
+UITableViewDataSource
+>
+
+/*** view 属性 ***/
+@property (nonatomic, strong) UITableView                           *tableView;
+
+/*** 数据类型 属性 ***/
+@property (nonatomic, strong) NSMutableArray                        *dataArray;
 
 @end
 
@@ -18,22 +29,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.tableView];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+#pragma mark ----------- TableView delegate -----------
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2 ;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:{
+            HNPersonalDetailsCell *cell = [HNPersonalDetailsCell cellWithTableView:tableView reuseIdentifier:@"HNPersonalDetailsCellID"];
+            return cell;
+        }
+            break;
+        case 1:{
+            HNTableViewCell     *cell = [tableView createHNTableViewCellWithStyle:HNTableViewCellStyleValueLeft reuseIdentifier:@"HNTableViewCellID"];
+            cell.accessoryType_HN = HNTableViewCellAccessoryDisclosureIndicator;
+            return cell;
+
+        }break;
+            
+        default:
+            break;
+    }
+    return nil;
+}
+
+
+#pragma mark ----------------------- 懒加载 --------------------
+/*** view 属性 ***/
+// tableView
+- (UITableView*)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight ) style:UITableViewStylePlain];
+        _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+        _tableView.rowHeight = 56;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+        _tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
+        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    }
+    return _tableView;
+}
+
+/*** 数据类型 属性 ***/
+- (NSMutableArray*)dataArray{
+    if (!_dataArray) {
+        _dataArray = [[NSMutableArray alloc]init];
+    }
+    return _dataArray;
+}
 
 @end

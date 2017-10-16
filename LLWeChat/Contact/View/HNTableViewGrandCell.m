@@ -82,7 +82,6 @@
             
             _leftLabel.frame = CGRectMake(10, 8, 50, 20);
             _textField.frame = CGRectMake(_leftLabel.right+10, 8, 100, 20);
-
             
         }break;
         default:
@@ -90,6 +89,8 @@
     }
 }
 
+
+#pragma  ------ lazy load UI ------
 // textField
 - (UITextField*)textField{
     if (!_textField) {

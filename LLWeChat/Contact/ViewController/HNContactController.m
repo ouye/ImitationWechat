@@ -11,8 +11,9 @@
 #import "HNContactController.h"
 #import "HNContactAddController.h"              // 添加朋友控制器
 #import "HNContactDetailsController.h"          // 联系人 详细资料控制器
-#import "HNSearchBar.h"
+#import "HNContactDetailsController.h"          // 联系人 详细资料控制器
 
+#import "HNSearchBar.h"
 #import "HNContactModel.h"
 #import "HNTableViewCell.h"
 #import "HNContactManager.h"
@@ -42,8 +43,6 @@ UISearchBarDelegate
     self.title = @"通讯录";
     [self createView];
     [self getDataFromServer];  //  获取联系人列表
-    
-    [MBProgressHUD showProgress];
     
     // 有好友添加请求通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contactChangedNotification:) name:HNContactChangedNotification object:[HNContactManager sharedManager]];
@@ -224,6 +223,7 @@ UISearchBarDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
     if (index == 0) {
+        [_tableView setContentOffset:CGPointZero animated:YES];
         return  -1;
     }
     return index;
@@ -235,7 +235,7 @@ UISearchBarDelegate
 // tableView
 - (UITableView*)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight ) style:UITableViewStylePlain];
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
         _tableView.rowHeight = 56;
         _tableView.delegate = self;
@@ -244,6 +244,7 @@ UISearchBarDelegate
         _tableView.sectionIndexColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         [_tableView setLayoutMargins:UIEdgeInsetsZero];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
+        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         _tableView.tableHeaderView = self.tableHeaderView;
 //        _tableView.contentInset = UIEdgeInsetsMake(0, 0, MAIN_BOTTOM_TABBAR_HEIGHT, 0);
     }
