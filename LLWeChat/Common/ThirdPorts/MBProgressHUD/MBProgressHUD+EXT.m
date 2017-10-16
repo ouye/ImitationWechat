@@ -86,13 +86,20 @@
     MBProgressHUD  *progressHUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
     // 是否全屏幕透明背景
-    progressHUD.dimBackground = dim;
+    progressHUD.backgroundColor = dim ? [UIColor colorWithWhite:0.f alpha:.2f] : [UIColor clearColor];
+
+    // 老版本的
+//    progressHUD.dimBackground = dim;
     
     // MBProgressHUD显示后 不影响其他交互
     progressHUD.userInteractionEnabled = isTouch;
     
-    // 提示框背景颜色      框架 默认 [UIColor blackColor]
-    progressHUD.color = color?color:nil;
+    // 提示框背景颜色      框架 默认 progressHUD.bezelView.backgroundColor  //灰白色的 不好看 还是以前版本的好看
+    progressHUD.bezelView.backgroundColor = color?color:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1];
+    progressHUD.bezelView.alpha = 0.8;
+    
+    // 老版本的
+//   progressHUD.color = color?color:nil;  设置
     
     // 提示框边界大小      20.f框架默认值
     CGFloat defutMargin = margin>0?margin:20.0f;

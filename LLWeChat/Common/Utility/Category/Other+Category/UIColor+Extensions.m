@@ -89,6 +89,9 @@
 }
 
 
+/**
+ *  获取图片上某个点的颜色
+ */
 + (UIColor *)colorAtPoint:(CGPoint)point fromImageView:(UIImageView *)imageView {
     if (!CGRectContainsPoint(imageView.bounds, point)) {
         return nil;
@@ -127,5 +130,12 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+
+/**
+ *  将一 color 加上alpha
+ */
+- (UIColor*)addAlpha:(CGFloat)alpha{
+    return   [self colorWithAlphaComponent:alpha];  //  原生已有此方法 😄
+}
 
 @end

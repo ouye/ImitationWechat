@@ -34,8 +34,14 @@ green:((_green)/255.0) blue:((_blue)/255.0) alpha:(_alpha)]
 
 
 #pragma  --------- UIColor 扩展功能 ----------
-// 获取图片上某个点的颜色
+/**
+ *  获取图片上某个点的颜色
+ */
 + (UIColor *)colorAtPoint:(CGPoint)point fromImageView:(UIImageView *)imageView;
 
+/**
+ *  将一 color 加上alpha
+ */
+- (UIColor*)addAlpha:(CGFloat)alpha;
 
 @end

@@ -43,6 +43,8 @@ UISearchBarDelegate
     [self createView];
     [self getDataFromServer];  //  获取联系人列表
     
+    [MBProgressHUD showProgress];
+    
     // 有好友添加请求通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contactChangedNotification:) name:HNContactChangedNotification object:[HNContactManager sharedManager]];
 }
@@ -169,7 +171,7 @@ UISearchBarDelegate
             cell.textLabel.text = @"标签";
             cell.imageView.image = [UIImage imageNamed:@"Contact_icon_ContactTag"];
         }else if (indexPath.row == 3) {
-            cell.textLabel.text = @"公众号";
+            cell.textLabel.text = @"公众号rrrrrrrrrrrrrr";
             cell.imageView.image = [UIImage imageNamed:@"add_friend_icon_offical"];
         }
     }else {
