@@ -1,20 +1,20 @@
 //
-//  LLUtils.m
+//  HNUtils.m
 //  LLWeChat
 //
 //  Created by 谌文 on 17/9/10.
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils.h"
+#import "HNUtils.h"
 
-@implementation LLUtils
+@implementation HNUtils
 
 + (instancetype)sharedUtils {
-    static LLUtils *_instance;
+    static HNUtils *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[LLUtils alloc] init];
+        _instance = [[HNUtils alloc] init];
     });
     
     return _instance;

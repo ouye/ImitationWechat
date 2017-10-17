@@ -9,7 +9,11 @@
 /************** 搜索结果 控制器 **************/
 
 #import "HNBaseViewController.h"
+#import "HNSearchViewController.h"
 
 @interface HNChatSearchController : HNBaseViewController
+
+@property (nonatomic, weak) HNSearchViewController *searchViewController;
+
 
 @end

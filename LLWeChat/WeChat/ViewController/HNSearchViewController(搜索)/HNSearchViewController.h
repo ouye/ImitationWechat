@@ -18,7 +18,7 @@
 
 @interface HNSearchViewController : HNBaseViewController
 
-@property (nonatomic, strong) UIViewController<HNSearchResultDelegate>*     searchResultController;
+@property (nonatomic) UIViewController<HNSearchResultDelegate>*     searchResultController;
 
 
 @property (nonatomic, weak) id<HNSearchControllerDelegate> delegate;
@@ -26,5 +26,7 @@
 
 /** 单利 */
 + (instancetype)sharedInstance;
+
+- (void)showInViewController:(UIViewController *)controller fromSearchBar:(UISearchBar *)fromSearchBar ;
 
 @end

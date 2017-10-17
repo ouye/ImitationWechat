@@ -1,12 +1,12 @@
 //
-//  LLUtils+CGHelper.m
+//  HNUtils+CGHelper.m
 //  LLWeChat
 //
 //  Created by 谌文 on 17/9/10.
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils+CGHelper.h"
+#import "HNUtils+CGHelper.h"
 
 CGFloat SCREEN_WIDTH;
 CGFloat SCREEN_HEIGHT;
@@ -16,7 +16,7 @@ CGRect SCREEN_FRAME;
 CGPoint SCREEN_CENTER;
 
 
-@implementation LLUtils (CGHelper)
+@implementation HNUtils (CGHelper)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -43,7 +43,7 @@ CGPoint SCREEN_CENTER;
 }
 
 + (CGFloat)pixelAlignForFloat:(CGFloat)position {
-    CGFloat scale = [LLUtils screenScale];
+    CGFloat scale = [HNUtils screenScale];
     return round(position * scale) / scale;
 }
 

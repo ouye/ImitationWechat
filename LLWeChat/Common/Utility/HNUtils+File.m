@@ -6,9 +6,9 @@
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils+File.h"
+#import "HNUtils+File.h"
 
-@implementation LLUtils (File)
+@implementation HNUtils (File)
 
 /*
  *  在该目录下有三个文件夹：Documents、Library、temp以及一个.app包！
@@ -113,10 +113,10 @@
             
             BOOL exist =  [fileManager fileExistsAtPath:folderPath isDirectory:&isDir];  // 判断路径是否存在
             if (isDir) {
-                size += [LLUtils getFileSize:fullPath num:size];
+                size += [HNUtils getFileSize:fullPath num:size];
             }
             
-            size += [LLUtils getFileSize:fullPath num:size];
+            size += [HNUtils getFileSize:fullPath num:size];
         }
     }else{
         NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfItemAtPath:folderPath error:nil];

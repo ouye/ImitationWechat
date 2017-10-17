@@ -6,10 +6,10 @@
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils.h"
+#import "HNUtils.h"
 @import AVFoundation;
 
-@interface LLUtils (Video)
+@interface HNUtils (Video)
 
 
 /**

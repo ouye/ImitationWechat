@@ -6,7 +6,7 @@
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils.h"
+#import "HNUtils.h"
 @import ImageIO;
 
 extern CGFloat SCREEN_WIDTH;
@@ -18,7 +18,7 @@ extern CGPoint SCREEN_CENTER;
 
 OBJC_EXTERN CGFloat CGPointDistanceBetween(CGPoint point1, CGPoint point2);
 
-@interface LLUtils (CGHelper)
+@interface HNUtils (CGHelper)
 
 + (CGFloat)screenScale;
 

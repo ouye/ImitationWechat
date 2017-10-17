@@ -6,9 +6,9 @@
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils.h"
+#import "HNUtils.h"
 
-@interface LLUtils (Text)
+@interface HNUtils (Text)
 
 + (CGFloat)widthForSingleLineString:(NSString *)text font:(UIFont *)font;
 

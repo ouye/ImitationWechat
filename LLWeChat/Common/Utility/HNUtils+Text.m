@@ -6,9 +6,9 @@
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils+Text.h"
+#import "HNUtils+Text.h"
 
-@implementation LLUtils (Text)
+@implementation HNUtils (Text)
 
 
 /*

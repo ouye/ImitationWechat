@@ -46,11 +46,11 @@
 		5E3CC04D1F715C1A00445C65 /* UITableView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0331F715C1A00445C65 /* UITableView+Extensions.m */; };
 		5E3CC04E1F715C1A00445C65 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0351F715C1A00445C65 /* UIView+Extensions.m */; };
 		5E3CC04F1F715C1A00445C65 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0371F715C1A00445C65 /* UIView+Frame.m */; };
-		5E3CC0501F715C1A00445C65 /* LLUtils+CGHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC03A1F715C1A00445C65 /* LLUtils+CGHelper.m */; };
-		5E3CC0511F715C1A00445C65 /* LLUtils+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC03C1F715C1A00445C65 /* LLUtils+File.m */; };
-		5E3CC0521F715C1A00445C65 /* LLUtils+Text.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC03E1F715C1A00445C65 /* LLUtils+Text.m */; };
-		5E3CC0531F715C1A00445C65 /* LLUtils+Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0401F715C1A00445C65 /* LLUtils+Video.m */; };
-		5E3CC0541F715C1A00445C65 /* LLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0421F715C1A00445C65 /* LLUtils.m */; };
+		5E3CC0501F715C1A00445C65 /* HNUtils+CGHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC03A1F715C1A00445C65 /* HNUtils+CGHelper.m */; };
+		5E3CC0511F715C1A00445C65 /* HNUtils+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC03C1F715C1A00445C65 /* HNUtils+File.m */; };
+		5E3CC0521F715C1A00445C65 /* HNUtils+Text.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC03E1F715C1A00445C65 /* HNUtils+Text.m */; };
+		5E3CC0531F715C1A00445C65 /* HNUtils+Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0401F715C1A00445C65 /* HNUtils+Video.m */; };
+		5E3CC0541F715C1A00445C65 /* HNUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0421F715C1A00445C65 /* HNUtils.m */; };
 		5E3CC0571F71653A00445C65 /* UIViewController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0561F71653A00445C65 /* UIViewController+Transition.m */; };
 		5E3CC05A1F7166E600445C65 /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CC0591F7166E600445C65 /* AnimatedTransitioning.m */; };
 		5E4122E08811E0EBB5AA4DC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E41296DC217873C62A365DE /* AppDelegate.m */; };
@@ -140,6 +140,8 @@
 		E2F6B8F41F95DAF600C34BEF /* HNSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8F31F95DAF600C34BEF /* HNSearchViewController.m */; };
 		E2F6B8F91F95E40400C34BEF /* HNChatSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8F81F95E40400C34BEF /* HNChatSearchController.m */; };
 		E2F6B8FC1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8FB1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m */; };
+		E2F6B9001F95F3EB00C34BEF /* HNButtonPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8FF1F95F3EB00C34BEF /* HNButtonPlace.m */; };
+		E2F6B9041F96019F00C34BEF /* HNUtils+Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B9031F96019F00C34BEF /* HNUtils+Application.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -224,16 +226,16 @@
 		5E3CC0351F715C1A00445C65 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
 		5E3CC0361F715C1A00445C65 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		5E3CC0371F715C1A00445C65 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		5E3CC0391F715C1A00445C65 /* LLUtils+CGHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLUtils+CGHelper.h"; sourceTree = "<group>"; };
-		5E3CC03A1F715C1A00445C65 /* LLUtils+CGHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LLUtils+CGHelper.m"; sourceTree = "<group>"; };
-		5E3CC03B1F715C1A00445C65 /* LLUtils+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLUtils+File.h"; sourceTree = "<group>"; };
-		5E3CC03C1F715C1A00445C65 /* LLUtils+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LLUtils+File.m"; sourceTree = "<group>"; };
-		5E3CC03D1F715C1A00445C65 /* LLUtils+Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLUtils+Text.h"; sourceTree = "<group>"; };
-		5E3CC03E1F715C1A00445C65 /* LLUtils+Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LLUtils+Text.m"; sourceTree = "<group>"; };
-		5E3CC03F1F715C1A00445C65 /* LLUtils+Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLUtils+Video.h"; sourceTree = "<group>"; };
-		5E3CC0401F715C1A00445C65 /* LLUtils+Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LLUtils+Video.m"; sourceTree = "<group>"; };
-		5E3CC0411F715C1A00445C65 /* LLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLUtils.h; sourceTree = "<group>"; };
-		5E3CC0421F715C1A00445C65 /* LLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLUtils.m; sourceTree = "<group>"; };
+		5E3CC0391F715C1A00445C65 /* HNUtils+CGHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HNUtils+CGHelper.h"; sourceTree = "<group>"; };
+		5E3CC03A1F715C1A00445C65 /* HNUtils+CGHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HNUtils+CGHelper.m"; sourceTree = "<group>"; };
+		5E3CC03B1F715C1A00445C65 /* HNUtils+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HNUtils+File.h"; sourceTree = "<group>"; };
+		5E3CC03C1F715C1A00445C65 /* HNUtils+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HNUtils+File.m"; sourceTree = "<group>"; };
+		5E3CC03D1F715C1A00445C65 /* HNUtils+Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HNUtils+Text.h"; sourceTree = "<group>"; };
+		5E3CC03E1F715C1A00445C65 /* HNUtils+Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HNUtils+Text.m"; sourceTree = "<group>"; };
+		5E3CC03F1F715C1A00445C65 /* HNUtils+Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HNUtils+Video.h"; sourceTree = "<group>"; };
+		5E3CC0401F715C1A00445C65 /* HNUtils+Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HNUtils+Video.m"; sourceTree = "<group>"; };
+		5E3CC0411F715C1A00445C65 /* HNUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNUtils.h; sourceTree = "<group>"; };
+		5E3CC0421F715C1A00445C65 /* HNUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNUtils.m; sourceTree = "<group>"; };
 		5E3CC0551F71653A00445C65 /* UIViewController+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Transition.h"; sourceTree = "<group>"; };
 		5E3CC0561F71653A00445C65 /* UIViewController+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Transition.m"; sourceTree = "<group>"; };
 		5E3CC0581F7166E600445C65 /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
@@ -432,6 +434,11 @@
 		E2F6B8F81F95E40400C34BEF /* HNChatSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChatSearchController.m; sourceTree = "<group>"; };
 		E2F6B8FA1F95E5FC00C34BEF /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
 		E2F6B8FB1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
+		E2F6B8FE1F95F3EB00C34BEF /* HNButtonPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNButtonPlace.h; sourceTree = "<group>"; };
+		E2F6B8FF1F95F3EB00C34BEF /* HNButtonPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNButtonPlace.m; sourceTree = "<group>"; };
+		E2F6B9011F95F43A00C34BEF /* HNSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNSubclass.h; sourceTree = "<group>"; };
+		E2F6B9021F96019F00C34BEF /* HNUtils+Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HNUtils+Application.h"; sourceTree = "<group>"; };
+		E2F6B9031F96019F00C34BEF /* HNUtils+Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HNUtils+Application.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -609,17 +616,20 @@
 		5E3CC01D1F715C1900445C65 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				E2F6B8FD1F95F2E100C34BEF /* Subclass */,
 				5E3CC01E1F715C1900445C65 /* Category */,
-				5E3CC0391F715C1A00445C65 /* LLUtils+CGHelper.h */,
-				5E3CC03A1F715C1A00445C65 /* LLUtils+CGHelper.m */,
-				5E3CC03B1F715C1A00445C65 /* LLUtils+File.h */,
-				5E3CC03C1F715C1A00445C65 /* LLUtils+File.m */,
-				5E3CC03D1F715C1A00445C65 /* LLUtils+Text.h */,
-				5E3CC03E1F715C1A00445C65 /* LLUtils+Text.m */,
-				5E3CC03F1F715C1A00445C65 /* LLUtils+Video.h */,
-				5E3CC0401F715C1A00445C65 /* LLUtils+Video.m */,
-				5E3CC0411F715C1A00445C65 /* LLUtils.h */,
-				5E3CC0421F715C1A00445C65 /* LLUtils.m */,
+				5E3CC0391F715C1A00445C65 /* HNUtils+CGHelper.h */,
+				5E3CC03A1F715C1A00445C65 /* HNUtils+CGHelper.m */,
+				5E3CC03B1F715C1A00445C65 /* HNUtils+File.h */,
+				5E3CC03C1F715C1A00445C65 /* HNUtils+File.m */,
+				5E3CC03D1F715C1A00445C65 /* HNUtils+Text.h */,
+				5E3CC03E1F715C1A00445C65 /* HNUtils+Text.m */,
+				5E3CC03F1F715C1A00445C65 /* HNUtils+Video.h */,
+				5E3CC0401F715C1A00445C65 /* HNUtils+Video.m */,
+				E2F6B9021F96019F00C34BEF /* HNUtils+Application.h */,
+				E2F6B9031F96019F00C34BEF /* HNUtils+Application.m */,
+				5E3CC0411F715C1A00445C65 /* HNUtils.h */,
+				5E3CC0421F715C1A00445C65 /* HNUtils.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1200,6 +1210,16 @@
 			path = "HNSearchViewController(搜索)";
 			sourceTree = "<group>";
 		};
+		E2F6B8FD1F95F2E100C34BEF /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				E2F6B9011F95F43A00C34BEF /* HNSubclass.h */,
+				E2F6B8FE1F95F3EB00C34BEF /* HNButtonPlace.h */,
+				E2F6B8FF1F95F3EB00C34BEF /* HNButtonPlace.m */,
+			);
+			path = Subclass;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1342,7 +1362,7 @@
 				5E3CC05A1F7166E600445C65 /* AnimatedTransitioning.m in Sources */,
 				DD8C48641D3A40BC003DF258 /* main.m in Sources */,
 				5E3CBFD71F71587200445C65 /* HNLookPhotoVC.m in Sources */,
-				5E3CC0521F715C1A00445C65 /* LLUtils+Text.m in Sources */,
+				5E3CC0521F715C1A00445C65 /* HNUtils+Text.m in Sources */,
 				5EEA08701F7D42D40062460B /* MBProgressHUD.m in Sources */,
 				E2C9501D1F8F3B6900973900 /* HNTableViewGrandCell.m in Sources */,
 				5E3CC0441F715C1A00445C65 /* HNBaseViewController.m in Sources */,
@@ -1353,6 +1373,7 @@
 				5E3CC00C1F715A5000445C65 /* UIImageView+WebCache.m in Sources */,
 				E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */,
 				5EA71CF61F877AD300850CDB /* HNDiscoveryController.m in Sources */,
+				E2F6B9001F95F3EB00C34BEF /* HNButtonPlace.m in Sources */,
 				5E3CBFD81F71587200445C65 /* HNPhotoView.m in Sources */,
 				E2F07DAB1F949575008D4DDB /* HNPersonalDetailsCell.m in Sources */,
 				5E3CC0071F715A5000445C65 /* UIButton+WebCache.m in Sources */,
@@ -1369,11 +1390,12 @@
 				5E3CC0151F715C0F00445C65 /* README.mdown in Sources */,
 				E2F6B8F41F95DAF600C34BEF /* HNSearchViewController.m in Sources */,
 				E2863CC91F8DA76A0060D546 /* HNClientManager.m in Sources */,
-				5E3CC0541F715C1A00445C65 /* LLUtils.m in Sources */,
-				5E3CC0531F715C1A00445C65 /* LLUtils+Video.m in Sources */,
+				5E3CC0541F715C1A00445C65 /* HNUtils.m in Sources */,
+				5E3CC0531F715C1A00445C65 /* HNUtils+Video.m in Sources */,
 				5E5FC1001F77FCDB00D57049 /* HNContactModel.m in Sources */,
 				5E3CC0061F715A5000445C65 /* SDWebImagePrefetcher.m in Sources */,
-				5E3CC0511F715C1A00445C65 /* LLUtils+File.m in Sources */,
+				5E3CC0511F715C1A00445C65 /* HNUtils+File.m in Sources */,
+				E2F6B9041F96019F00C34BEF /* HNUtils+Application.m in Sources */,
 				5E3CC04F1F715C1A00445C65 /* UIView+Frame.m in Sources */,
 				5E3CBFD31F71587200445C65 /* AA.m in Sources */,
 				5E3CC04D1F715C1A00445C65 /* UITableView+Extensions.m in Sources */,
@@ -1415,7 +1437,7 @@
 				5EAF8FDA1F716E3F0004A4C9 /* TransitionConst.m in Sources */,
 				5E3CC0431F715C1A00445C65 /* HNBaseNavigationController.m in Sources */,
 				5E3CBFD91F71587200445C65 /* PresentTransition.m in Sources */,
-				5E3CC0501F715C1A00445C65 /* LLUtils+CGHelper.m in Sources */,
+				5E3CC0501F715C1A00445C65 /* HNUtils+CGHelper.m in Sources */,
 				5E3CC0461F715C1A00445C65 /* NSString+Encrypt.m in Sources */,
 				E2F07DBF1F94A84F008D4DDB /* HNSearchBar.m in Sources */,
 				5EA71D0F1F88CC7900850CDB /* HNBaseTabBarController.m in Sources */,

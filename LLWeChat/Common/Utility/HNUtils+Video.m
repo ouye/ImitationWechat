@@ -1,17 +1,17 @@
 //
-//  LLUtils+Video.m
+//  HNUtils+Video.m
 //  LLWeChat
 //
 //  Created by 谌文 on 17/9/11.
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils+Video.h"
+#import "HNUtils+Video.h"
 
 #define AlAsset_Library_Scheme @"assets-library"
 
 
-@implementation LLUtils (Video)
+@implementation HNUtils (Video)
 
 /**
  *  将Apple视频录制的格式MOV转换为MP4格式

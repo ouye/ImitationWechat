@@ -6,9 +6,9 @@
 //  Copyright © 2017年 GYJZH. All rights reserved.
 //
 
-#import "LLUtils.h"
+#import "HNUtils.h"
 
-@interface LLUtils (File)
+@interface HNUtils (File)
 
 /*
  *  在该目录下有三个文件夹：Documents、Library、temp以及一个.app包！

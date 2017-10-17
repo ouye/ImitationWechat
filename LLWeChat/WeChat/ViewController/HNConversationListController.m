@@ -10,6 +10,7 @@
 
 #import "HNConversationListController.h"
 #import "HNSearchViewController.h"                  // 搜索 控制器
+#import "HNChatSearchController.h"
 
 #import "HNSearchBar.h"
 #import "HNConversationListCell.h"
@@ -40,6 +41,8 @@ HNSearchControllerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"微信";
+    
+  
     
     [self createView];
 
@@ -86,8 +89,11 @@ HNSearchControllerDelegate
     navigationVC.view.backgroundColor = [UIColor clearColor];
     searchVC.delegate = self;
 
-    
-    
+    HNChatSearchController *resultController = [[HNChatSearchController alloc]init];
+    searchVC.searchResultController = resultController;
+    resultController.searchViewController = searchVC;
+    [searchVC showInViewController:self fromSearchBar:self.searchBar];
+
     return NO;
 }
 

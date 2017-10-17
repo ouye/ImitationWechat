@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface LLUtils : NSObject
+@interface HNUtils : NSObject
 
 + (instancetype)sharedUtils;            //单利
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "LLUtils+CGHelper.h"
-#import "LLUtils+File.h"                // 获取处理文件路径的
-#import "LLUtils+Video.h"
+#import "HNUtils+CGHelper.h"
+#import "HNUtils+File.h"                // 获取处理文件路径的
+#import "HNUtils+Video.h"
+#import "HNUtils+Application.h"
