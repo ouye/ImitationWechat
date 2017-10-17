@@ -42,8 +42,6 @@ HNSearchControllerDelegate
     self.title = @"微信";
     
     [self createView];
-    
-
 
 }
 
