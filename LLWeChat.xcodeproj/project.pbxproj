@@ -137,6 +137,9 @@
 		E2F07DBF1F94A84F008D4DDB /* HNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */; };
 		E2F07DC01F94A84F008D4DDB /* HNConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */; };
 		E2F07DCB1F94BA3A008D4DDB /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */; };
+		E2F6B8F41F95DAF600C34BEF /* HNSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8F31F95DAF600C34BEF /* HNSearchViewController.m */; };
+		E2F6B8F91F95E40400C34BEF /* HNChatSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8F81F95E40400C34BEF /* HNChatSearchController.m */; };
+		E2F6B8FC1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F6B8FB1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m */; };
 		EC564D652A3D5FEAE78D57F8 /* Pods_LLWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -421,6 +424,14 @@
 		E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationListController.m; sourceTree = "<group>"; };
 		E2F07DC91F94BA3A008D4DDB /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
+		E2F6B8F21F95DAF600C34BEF /* HNSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchViewController.h; sourceTree = "<group>"; };
+		E2F6B8F31F95DAF600C34BEF /* HNSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchViewController.m; sourceTree = "<group>"; };
+		E2F6B8F51F95DEEB00C34BEF /* HNSearchControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNSearchControllerDelegate.h; path = ../../../../../../../Documents/HNSearchControllerDelegate.h; sourceTree = "<group>"; };
+		E2F6B8F61F95E2A400C34BEF /* HNSearchResultDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNSearchResultDelegate.h; path = ../../../../../../../Documents/HNSearchResultDelegate.h; sourceTree = "<group>"; };
+		E2F6B8F71F95E40400C34BEF /* HNChatSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNChatSearchController.h; sourceTree = "<group>"; };
+		E2F6B8F81F95E40400C34BEF /* HNChatSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChatSearchController.m; sourceTree = "<group>"; };
+		E2F6B8FA1F95E5FC00C34BEF /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
+		E2F6B8FB1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +654,8 @@
 		5E3CC0291F715C1A00445C65 /* View+Category */ = {
 			isa = PBXGroup;
 			children = (
+				E2F6B8FA1F95E5FC00C34BEF /* UIButton+EnlargeEdge.h */,
+				E2F6B8FB1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m */,
 				E2EA23231F90C48400CCF95C /* UIViewController+Extension.h */,
 				E2EA23241F90C48400CCF95C /* UIViewController+Extension.m */,
 				5EEA08711F7D4C160062460B /* UIAlertController+Extensions.h */,
@@ -1007,8 +1020,8 @@
 			isa = PBXGroup;
 			children = (
 				5E57C5B01F63BA8F00866330 /* Main */,
-				5E70947B1F619C0A0072FFE1 /* Contact */,
 				E2F07DAE1F94A84F008D4DDB /* WeChat */,
+				5E70947B1F619C0A0072FFE1 /* Contact */,
 				5E70947C1F619C2A0072FFE1 /* Discovery */,
 				5E70947D1F619C3F0072FFE1 /* ME */,
 				E2863CB91F8DA7610060D546 /* Server */,
@@ -1117,9 +1130,9 @@
 		E2F07DAE1F94A84F008D4DDB /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				E2F07DAF1F94A84F008D4DDB /* Model */,
-				E2F07DB41F94A84F008D4DDB /* View */,
 				E2F07DB91F94A84F008D4DDB /* ViewController */,
+				E2F07DB41F94A84F008D4DDB /* View */,
+				E2F07DAF1F94A84F008D4DDB /* Model */,
 			);
 			path = WeChat;
 			sourceTree = "<group>";
@@ -1142,6 +1155,7 @@
 				E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */,
 				E2F07DB71F94A84F008D4DDB /* HNSearchBar.h */,
 				E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */,
+				E2F6B8ED1F95DAA100C34BEF /* HNSearchView(搜索) */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1151,6 +1165,7 @@
 			children = (
 				E2F07DBA1F94A84F008D4DDB /* HNConversationListController.h */,
 				E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */,
+				E2F6B8F11F95DAF600C34BEF /* HNSearchViewController(搜索) */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1162,6 +1177,27 @@
 				E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */,
 			);
 			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		E2F6B8ED1F95DAA100C34BEF /* HNSearchView(搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				E2F6B8F51F95DEEB00C34BEF /* HNSearchControllerDelegate.h */,
+				E2F6B8F61F95E2A400C34BEF /* HNSearchResultDelegate.h */,
+			);
+			name = "HNSearchView(搜索)";
+			path = HNSearchView;
+			sourceTree = "<group>";
+		};
+		E2F6B8F11F95DAF600C34BEF /* HNSearchViewController(搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				E2F6B8F21F95DAF600C34BEF /* HNSearchViewController.h */,
+				E2F6B8F31F95DAF600C34BEF /* HNSearchViewController.m */,
+				E2F6B8F71F95E40400C34BEF /* HNChatSearchController.h */,
+				E2F6B8F81F95E40400C34BEF /* HNChatSearchController.m */,
+			);
+			path = "HNSearchViewController(搜索)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1311,6 +1347,7 @@
 				E2C9501D1F8F3B6900973900 /* HNTableViewGrandCell.m in Sources */,
 				5E3CC0441F715C1A00445C65 /* HNBaseViewController.m in Sources */,
 				5E3CC0571F71653A00445C65 /* UIViewController+Transition.m in Sources */,
+				E2F6B8F91F95E40400C34BEF /* HNChatSearchController.m in Sources */,
 				E2863CC81F8DA76A0060D546 /* HNChatManager.m in Sources */,
 				E29F50FA1F8DF52500A030D8 /* HNContactAddController.m in Sources */,
 				5E3CC00C1F715A5000445C65 /* UIImageView+WebCache.m in Sources */,
@@ -1325,10 +1362,12 @@
 				5EE37BCC1F73FCE400ACA971 /* HNPhotoBrowserAnimator.m in Sources */,
 				5E8136FE1F8692BD006F7533 /* UIColor+Extensions.m in Sources */,
 				5E3CC0081F715A5000445C65 /* UIImage+GIF.m in Sources */,
+				E2F6B8FC1F95E5FC00C34BEF /* UIButton+EnlargeEdge.m in Sources */,
 				5E5FC0EA1F75664300D57049 /* HNPhotoInteractiveTransition.m in Sources */,
 				E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */,
 				5EE37BCF1F740FBE00ACA971 /* HNExampleViewControoler.m in Sources */,
 				5E3CC0151F715C0F00445C65 /* README.mdown in Sources */,
+				E2F6B8F41F95DAF600C34BEF /* HNSearchViewController.m in Sources */,
 				E2863CC91F8DA76A0060D546 /* HNClientManager.m in Sources */,
 				5E3CC0541F715C1A00445C65 /* LLUtils.m in Sources */,
 				5E3CC0531F715C1A00445C65 /* LLUtils+Video.m in Sources */,

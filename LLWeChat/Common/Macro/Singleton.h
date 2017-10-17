@@ -54,3 +54,9 @@ _instance = [[CLASS_NAME alloc] init]; \
 \
 return _instance; \
 }
+
+
+
+
+
+

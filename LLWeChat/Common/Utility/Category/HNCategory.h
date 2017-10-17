@@ -20,5 +20,6 @@
 #import "UILabel+Extensions.h"
 #import "UILabel+Extensions.h"
 #import "UIViewController+Extension.h"
+#import "UIButton+EnlargeEdge.h"
 
 #endif /* HNCategory_h */

@@ -22,4 +22,8 @@
 #import "HNCategory.h"
 #import "ThirdPort.h"
 
+#import "HNBaseNavigationController.h"
+#import "HNBaseViewController.h"
+
+
 #endif /* Prefix_h */

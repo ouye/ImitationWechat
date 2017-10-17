@@ -254,7 +254,7 @@ UISearchBarDelegate
 // searchBar
 - (HNSearchBar*)searchBar{
     if (!_searchBar) {
-        _searchBar = [HNSearchBar defaultSearchBarWithFrame:CGRectMake(0, 0, ScreenWidth - 10, HNSearchBardefaultHeight + 16)];
+        _searchBar = [HNSearchBar defaultSearchBarWithFrame:CGRectMake(0, 0, ScreenWidth , HNSearchBardefaultHeight + 16)];
         _searchBar.delegate = self;
         _searchBar.placeholder = @"搜索";
     }

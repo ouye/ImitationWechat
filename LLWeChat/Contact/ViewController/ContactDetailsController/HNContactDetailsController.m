@@ -31,7 +31,7 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置导航栏 的背景颜色 
+    // 设置导航栏 的背景颜色
     [self wr_setNavBarBarTintColor:[UIColor redColor]];
     [self wr_setNavBarBackgroundAlpha:1];
 
