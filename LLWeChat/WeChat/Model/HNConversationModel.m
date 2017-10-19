@@ -7,10 +7,24 @@
 //
 
 #import "HNConversationModel.h"
+#import "HNConversationModelManager.h"
+
 
 @implementation HNConversationModel
 
 
+- (instancetype)initWithConversation:(EMConversation *)conversation {
+    self = [super init];
+    if (self) {
+        _sdk_conversation = conversation;
+        _conversationType = (HNConversationType)conversation.type;
+        
+        _unreadMessageNumber = -1;
+        _allMessageModels = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
 
 
 /**
@@ -30,5 +44,23 @@
 }
 
 
++ (HNConversationModel *)conversationModelFromPool:(EMConversation *)conversation {
+    HNConversationModel *conversationModel = [[HNConversationModelManager sharedManager] conversationModelForConversationId:conversation.conversationId];
+    if (!conversationModel) {
+        conversationModel = [[HNConversationModel alloc] initWithConversation:conversation];
+        [[HNConversationModelManager sharedManager] addConversationModel:conversationModel];
+    }else if (conversationModel.sdk_conversation != conversation) {
+        [conversationModel updateConversationModel:conversation];
+    }
+    
+    return conversationModel;
+}
+
+- (void)updateConversationModel:(EMConversation *)conversation {
+    NSAssert([_sdk_conversation.conversationId isEqualToString:conversation.conversationId], @"更新会话数据时，conversationId发生改变");
+    
+    _sdk_conversation = conversation;
+    
+}
 
 @end

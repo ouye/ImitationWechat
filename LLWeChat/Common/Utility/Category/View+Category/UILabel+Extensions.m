@@ -34,4 +34,23 @@
     return label.size;
 }
 
+
+
+/**
+ *   改变字符串中具体某字符串的颜色
+ *   @param change          需要改变颜色的字
+ *   @param allColor        其他文字的颜色
+ *   @param markColor       需要改变文字的颜色
+ *   @param fontSize        需要改变文字的字体大小
+ */
+- (void)changeString:(NSString *)change andAllColor:(UIColor *)allColor andMarkColor:(UIColor *)markColor andMarkFondSize:(float)fontSize{
+    NSString *tempStr = self.text;
+    NSMutableAttributedString *strAtt = [[NSMutableAttributedString alloc] initWithString:tempStr];
+    [strAtt addAttribute:NSForegroundColorAttributeName value:allColor range:NSMakeRange(0, [strAtt length])];
+    NSRange markRange = [tempStr rangeOfString:change];
+    [strAtt addAttribute:NSForegroundColorAttributeName value:markColor range:markRange];
+    [strAtt addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue" size:fontSize] range:markRange];
+    self.attributedText = strAtt;
+}
+
 @end

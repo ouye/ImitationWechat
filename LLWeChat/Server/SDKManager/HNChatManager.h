@@ -15,6 +15,9 @@
 /** 该方法在主线程回调 */
 - (void)loadMoreMessagesDidFinishedWithConversationModel:(HNConversationModel *)aConversationModel;
 
+/** 该方法在主线程回调 */
+- (void)conversationListDidChanged:(NSArray<HNConversationModel *> *)conversationList;
+
 /** */
 - (void)unreadMessageNumberDidChanged;
 
@@ -30,6 +33,12 @@
 
 /** 单利 */
 + (instancetype)sharedManager;
+
+/**
+ *   从数据库中加载会话
+ */
+- (void)getAllConversationFromDB;
+
 
 /*!
  *  将所有未读消息设置为已读

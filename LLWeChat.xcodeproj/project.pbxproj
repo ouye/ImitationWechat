@@ -126,6 +126,8 @@
 		E2863CCA1F8DA76A0060D546 /* HNContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC01F8DA76A0060D546 /* HNContactManager.m */; };
 		E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC21F8DA76A0060D546 /* HNPushOptions.m */; };
 		E2863CCC1F8DA76A0060D546 /* HNSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = E2863CC51F8DA76A0060D546 /* HNSDKError.m */; };
+		E28FFBAA1F9707AC00A78100 /* HNMessageSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFBA91F9707AC00A78100 /* HNMessageSearchResultModel.m */; };
+		E28FFBAF1F97310500A78100 /* HNConversationModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFBAE1F97310500A78100 /* HNConversationModelManager.m */; };
 		E29F50FA1F8DF52500A030D8 /* HNContactAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50F91F8DF52500A030D8 /* HNContactAddController.m */; };
 		E29F50FE1F8E02CF00A030D8 /* HNContactSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29F50FD1F8E02CF00A030D8 /* HNContactSearchView.m */; };
 		E2C9501D1F8F3B6900973900 /* HNTableViewGrandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9501C1F8F3B6900973900 /* HNTableViewGrandCell.m */; };
@@ -404,6 +406,10 @@
 		E2863CC51F8DA76A0060D546 /* HNSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSDKError.m; sourceTree = "<group>"; };
 		E2863CC61F8DA76A0060D546 /* HNSDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKErrorCode.h; sourceTree = "<group>"; };
 		E2863CC71F8DA76A0060D546 /* HNSDKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSDKType.h; sourceTree = "<group>"; };
+		E28FFBA81F9707AC00A78100 /* HNMessageSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNMessageSearchResultModel.h; sourceTree = "<group>"; };
+		E28FFBA91F9707AC00A78100 /* HNMessageSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNMessageSearchResultModel.m; sourceTree = "<group>"; };
+		E28FFBAD1F97310500A78100 /* HNConversationModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConversationModelManager.h; sourceTree = "<group>"; };
+		E28FFBAE1F97310500A78100 /* HNConversationModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNConversationModelManager.m; sourceTree = "<group>"; };
 		E29F50F81F8DF52500A030D8 /* HNContactAddController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactAddController.h; sourceTree = "<group>"; };
 		E29F50F91F8DF52500A030D8 /* HNContactAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactAddController.m; sourceTree = "<group>"; };
 		E29F50FC1F8E02CF00A030D8 /* HNContactSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactSearchView.h; sourceTree = "<group>"; };
@@ -1110,6 +1116,24 @@
 			path = SDKManager;
 			sourceTree = "<group>";
 		};
+		E28FFBA71F97079600A78100 /* HNSearchModel(搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				E28FFBA81F9707AC00A78100 /* HNMessageSearchResultModel.h */,
+				E28FFBA91F9707AC00A78100 /* HNMessageSearchResultModel.m */,
+			);
+			path = "HNSearchModel(搜索)";
+			sourceTree = "<group>";
+		};
+		E28FFBAC1F9730F800A78100 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E28FFBAD1F97310500A78100 /* HNConversationModelManager.h */,
+				E28FFBAE1F97310500A78100 /* HNConversationModelManager.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		E29F50F71F8DF50200A030D8 /* AddContactController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1143,6 +1167,7 @@
 				E2F07DB91F94A84F008D4DDB /* ViewController */,
 				E2F07DB41F94A84F008D4DDB /* View */,
 				E2F07DAF1F94A84F008D4DDB /* Model */,
+				E28FFBAC1F9730F800A78100 /* Tool */,
 			);
 			path = WeChat;
 			sourceTree = "<group>";
@@ -1154,6 +1179,7 @@
 				E2F07DB11F94A84F008D4DDB /* HNConversationModel.m */,
 				E2F07DB21F94A84F008D4DDB /* HNMessageModel.h */,
 				E2F07DB31F94A84F008D4DDB /* HNMessageModel.m */,
+				E28FFBA71F97079600A78100 /* HNSearchModel(搜索) */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1373,6 +1399,7 @@
 				5E3CC00C1F715A5000445C65 /* UIImageView+WebCache.m in Sources */,
 				E2863CCB1F8DA76A0060D546 /* HNPushOptions.m in Sources */,
 				5EA71CF61F877AD300850CDB /* HNDiscoveryController.m in Sources */,
+				E28FFBAF1F97310500A78100 /* HNConversationModelManager.m in Sources */,
 				E2F6B9001F95F3EB00C34BEF /* HNButtonPlace.m in Sources */,
 				5E3CBFD81F71587200445C65 /* HNPhotoView.m in Sources */,
 				E2F07DAB1F949575008D4DDB /* HNPersonalDetailsCell.m in Sources */,
@@ -1422,6 +1449,7 @@
 				5E089BB21F7944A800EC26FD /* MBProgressHUD+EXT.m in Sources */,
 				5EA71D131F88CD0700850CDB /* HNTabBarMainFourController.m in Sources */,
 				5E3CC0091F715A5000445C65 /* UIImage+MultiFormat.m in Sources */,
+				E28FFBAA1F9707AC00A78100 /* HNMessageSearchResultModel.m in Sources */,
 				5E3CBFD51F71587200445C65 /* CC.m in Sources */,
 				5E3CBFFF1F715A5000445C65 /* NSData+ImageContentType.m in Sources */,
 				5E3CC04C1F715C1A00445C65 /* UIScrollView+Extensions.m in Sources */,

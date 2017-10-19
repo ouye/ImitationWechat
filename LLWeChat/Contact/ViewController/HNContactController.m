@@ -18,6 +18,11 @@
 #import "HNTableViewCell.h"
 #import "HNContactManager.h"
 
+
+// 搜索背景颜色 颜色
+#define HNViewBgColor [UIColor colorWithRed:240/255.0 green:239/255.0 blue:245/255.0 alpha:1]
+
+
 @interface HNContactController ()<
 UITableViewDelegate,
 UITableViewDataSource,
@@ -246,6 +251,7 @@ UISearchBarDelegate
         _tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         _tableView.tableHeaderView = self.tableHeaderView;
+        _tableView.backgroundColor = HNViewBgColor;
 //        _tableView.contentInset = UIEdgeInsetsMake(0, 0, MAIN_BOTTOM_TABBAR_HEIGHT, 0);
     }
     return _tableView;

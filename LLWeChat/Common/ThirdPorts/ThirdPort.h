@@ -12,6 +12,7 @@
 
 #import "MBProgressHUD+EXT.h"
 #import "UIImageView+WebCache.h"
+#import "WRNavigationBar.h"
 
 
 #endif /* ThirdPort_h */

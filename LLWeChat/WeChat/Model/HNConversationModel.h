@@ -41,6 +41,9 @@
 /**  消息草稿 */
 @property (nonatomic, copy)   NSString              *draft;
 
+//该Conversation已经获取到的消息数组，按照时间从过去到现在排序，最近的消息在数组最后面
+@property (atomic) NSMutableArray<HNMessageModel *> *allMessageModels;
+
 
 #pragma mark - 消息列表 -
 #pragma mark - Server.SDK专用，Client代码不直接访问 -
@@ -55,5 +58,9 @@
  *  获取消息的 最后一跳消息状态
  */
 - (HNMessageStatus)latestMessageStatus;
+
+
++ (HNConversationModel *)conversationModelFromPool:(EMConversation *)conversation;
+
 
 @end

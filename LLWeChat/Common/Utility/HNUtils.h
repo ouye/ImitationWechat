@@ -12,6 +12,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//  处理时间戳用的
+inline static long long adjustTimestampFromServer(long long timestamp) {
+    if (timestamp > 140000000000) {
+        timestamp /= 1000;
+    }
+    return timestamp;
+}
 
 @interface HNUtils : NSObject
 

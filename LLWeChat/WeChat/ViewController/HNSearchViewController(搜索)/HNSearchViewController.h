@@ -11,7 +11,7 @@
 #import "HNBaseViewController.h"
 #import "HNSearchControllerDelegate.h"
 #import "HNSearchResultDelegate.h"
-
+#import "HNSearchBar.h"
 
 #define HIDE_ANIMATION_DURATION 0.3
 #define SHOW_ANIMATION_DURATION 0.3
@@ -20,13 +20,18 @@
 
 @property (nonatomic) UIViewController<HNSearchResultDelegate>*     searchResultController;
 
+@property (nonatomic, weak) id<HNSearchControllerDelegate>  delegate;
 
-@property (nonatomic, weak) id<HNSearchControllerDelegate> delegate;
+@property (nonatomic, strong) HNSearchBar                   *searchBar;
 
 
 /** 单利 */
 + (instancetype)sharedInstance;
 
 - (void)showInViewController:(UIViewController *)controller fromSearchBar:(UISearchBar *)fromSearchBar ;
+
+- (void)dismissSearchController;
+
+- (void)dismissKeyboard;
 
 @end

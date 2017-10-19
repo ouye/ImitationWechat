@@ -27,6 +27,17 @@ typedef NS_ENUM(NSInteger, HNTableViewGrandCellStyle) {
     
 };
 
+typedef NS_ENUM(NSInteger,HNTableViewGrandCellAccessoryType) {
+    HNTableViewGrandCellAccessoryNone = UITableViewCellAccessoryNone,
+    HNTableViewGrandCellAccessoryDisclosureIndicator = UITableViewCellAccessoryDisclosureIndicator,
+    HNTableViewGrandCellAccessoryDetailDisclosureButton = UITableViewCellAccessoryDetailDisclosureButton,
+    HNTableViewGrandCellAccessoryCheckmark = UITableViewCellAccessoryCheckmark,
+    HNTableViewGrandCellAccessoryDetailButton = UITableViewCellAccessoryDetailButton,
+    
+    HNTableViewGrandCellAccessorySwitch,
+    HNTableViewGrandCellAccessoryText,
+};
+
 
 @interface HNTableViewGrandCell : UITableViewCell
 

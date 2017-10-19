@@ -14,14 +14,15 @@
 
 #import "HNSearchBar.h"
 #import "HNConversationListCell.h"
-
+#import "HNChatManager.h"
 #import "HNConversationModel.h"
 
 @interface HNConversationListController ()<
 UITableViewDelegate,
 UITableViewDataSource,
 UISearchBarDelegate,
-HNSearchControllerDelegate
+HNSearchControllerDelegate,
+HNChatManagerConversationListDelegate
 >
 
 /*** view 属性 ***/
@@ -43,9 +44,13 @@ HNSearchControllerDelegate
     self.title = @"微信";
     
   
-    
-    [self createView];
+    // 获取环信 socket 链接状态
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectionStateChanged:) name:HNConnectionStateDidChangedNotification object:nil];
 
+    [self createView];
+    
+    //fetch data
+    [self fetchData];
 }
 
 
@@ -62,6 +67,23 @@ HNSearchControllerDelegate
     self.navigationItem.rightBarButtonItem = plusItem;
 }
 
+
+#pragma mark - 获取会话数据
+
+- (void)fetchData {
+    [HNChatManager sharedManager].conversationListDelegate = self;
+    [[HNChatManager sharedManager] getAllConversationFromDB];
+}
+
+- (void)conversationListDidChanged:(NSArray<HNConversationModel *> *)conversationList {
+    self.allConversationModels = [conversationList mutableCopy];
+    [self.tableView reloadData];
+//    [self setUnreadMessageCount];
+}
+
+- (NSMutableArray<HNConversationModel *> *)currentConversationList {
+    return [self.allConversationModels mutableCopy];
+}
 
 
 
@@ -81,7 +103,6 @@ HNSearchControllerDelegate
 }
 
 
-
 #pragma mark - 搜索 - delegate -----
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
     HNSearchViewController *searchVC = [HNSearchViewController sharedInstance];
@@ -93,7 +114,6 @@ HNSearchControllerDelegate
     searchVC.searchResultController = resultController;
     resultController.searchViewController = searchVC;
     [searchVC showInViewController:self fromSearchBar:self.searchBar];
-
     return NO;
 }
 
@@ -133,6 +153,18 @@ HNSearchControllerDelegate
     //    }];
 }
 
+
+#pragma ---- private menthod 私有方法 -----
+
+//  环信 socket链接状态
+- (void)connectionStateChanged:(NSNotification*)notification {
+    BOOL isConnected = [notification.userInfo[@"connectionState"] integerValue] == HNConnectionStateConnected;
+    if (!isConnected) {
+        self.navigationItem.title = @"微信(未连接)";
+    }else {
+        self.navigationItem.title = @"微信";
+    }
+}
 
 
 #pragma mark ----------------------- 懒加载 --------------------

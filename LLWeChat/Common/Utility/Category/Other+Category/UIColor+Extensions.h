@@ -19,7 +19,7 @@ green:((_green)/255.0) blue:((_blue)/255.0) alpha:(_alpha)]
 
 #define UIColorHexRGBA(rgbaString) [UIColor colorWithHexRGBA:(rgbaString)]
 
-#define UIColorHexaRGB(rgd) [UIColor colorWithRed:((int)(0x111111 & 0x00FF00) >> 16) / 255.0 green:((int)(0x111111 & 0x0000FF) >> 8) / 255.0 blue:((int)(0x111111 & 0x0000FF) )/255.0 alpha:1]            //16进制
+#define UIColorHexaRGB(value) [UIColor colorWithRed:((float)((value & 0xFF0000) >> 16))/255.0 green:((float)((value & 0xFF00) >> 8))/255.0 blue:((float)(value & 0xFF))/255.0 alpha:1.0]            //16进制
 
 
 + (instancetype)colorWithHexRGBA:(NSString *)rgba;
