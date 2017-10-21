@@ -151,6 +151,8 @@
 		5CB1C6E1D8BC66A96ECC9D8C /* Pods_LLWeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLWeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E089BB01F7944A800EC26FD /* MBProgressHUD+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+EXT.h"; sourceTree = "<group>"; };
 		5E089BB11F7944A800EC26FD /* MBProgressHUD+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+EXT.m"; sourceTree = "<group>"; };
+		5E19BA0C1F9B73C900A17395 /* HNSearchResultDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchResultDelegate.h; sourceTree = "<group>"; };
+		5E19BA0F1F9B749900A17395 /* HNSearchControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchControllerDelegate.h; sourceTree = "<group>"; };
 		5E2A2C481F8E71510010DCB1 /* HNContactDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactDetailsController.h; sourceTree = "<group>"; };
 		5E2A2C491F8E71510010DCB1 /* HNContactDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactDetailsController.m; sourceTree = "<group>"; };
 		5E3CBFC41F71587200445C65 /* AA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AA.h; sourceTree = "<group>"; };
@@ -434,8 +436,6 @@
 		E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		E2F6B8F21F95DAF600C34BEF /* HNSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchViewController.h; sourceTree = "<group>"; };
 		E2F6B8F31F95DAF600C34BEF /* HNSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSearchViewController.m; sourceTree = "<group>"; };
-		E2F6B8F51F95DEEB00C34BEF /* HNSearchControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNSearchControllerDelegate.h; path = ../../../../../../../Documents/HNSearchControllerDelegate.h; sourceTree = "<group>"; };
-		E2F6B8F61F95E2A400C34BEF /* HNSearchResultDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNSearchResultDelegate.h; path = ../../../../../../../Documents/HNSearchResultDelegate.h; sourceTree = "<group>"; };
 		E2F6B8F71F95E40400C34BEF /* HNChatSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNChatSearchController.h; sourceTree = "<group>"; };
 		E2F6B8F81F95E40400C34BEF /* HNChatSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChatSearchController.m; sourceTree = "<group>"; };
 		E2F6B8FA1F95E5FC00C34BEF /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
@@ -1130,6 +1130,8 @@
 			children = (
 				E28FFBAD1F97310500A78100 /* HNConversationModelManager.h */,
 				E28FFBAE1F97310500A78100 /* HNConversationModelManager.m */,
+				5E19BA0C1F9B73C900A17395 /* HNSearchResultDelegate.h */,
+				5E19BA0F1F9B749900A17395 /* HNSearchControllerDelegate.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1191,7 +1193,6 @@
 				E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */,
 				E2F07DB71F94A84F008D4DDB /* HNSearchBar.h */,
 				E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */,
-				E2F6B8ED1F95DAA100C34BEF /* HNSearchView(搜索) */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1213,16 +1214,6 @@
 				E2F07DCA1F94BA3A008D4DDB /* WRNavigationBar.m */,
 			);
 			path = WRNavigationBar;
-			sourceTree = "<group>";
-		};
-		E2F6B8ED1F95DAA100C34BEF /* HNSearchView(搜索) */ = {
-			isa = PBXGroup;
-			children = (
-				E2F6B8F51F95DEEB00C34BEF /* HNSearchControllerDelegate.h */,
-				E2F6B8F61F95E2A400C34BEF /* HNSearchResultDelegate.h */,
-			);
-			name = "HNSearchView(搜索)";
-			path = HNSearchView;
 			sourceTree = "<group>";
 		};
 		E2F6B8F11F95DAF600C34BEF /* HNSearchViewController(搜索) */ = {
