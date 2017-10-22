@@ -10,7 +10,7 @@
 
 #import "HNChatViewController.h"
 #import "HNMessageModel.h"
-#import "HNMessageCellManager.h"
+//#import "HNMessageCellManager.h"
 
 @interface HNChatViewController ()
 
@@ -44,94 +44,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     [UIView setAnimationsEnabled:NO];
-    HNMessageModel *messageModel = self.dataSource[indexPath.row];
-    NSString *reuseId = [[HNMessageCellManager sharedManager] reuseIdentifierForMessegeModel:messageModel];
-    UITableViewCell *_cell;
-    
-    switch (messageModel.messageBodyType) {
-        case kLLMessageBodyTypeText:
-        case kLLMessageBodyTypeVideo:
-        case kLLMessageBodyTypeVoice:
-        case kLLMessageBodyTypeImage:
-        case kLLMessageBodyTypeLocation: {
-            LLMessageBaseCell *cell = [[LLMessageCellManager sharedManager] messageCellForMessageModel:messageModel tableView:tableView];
-            cell.delegate = self;
-            _cell = cell;
-            break;
-        }
-        case kLLMessageBodyTypeDateTime: {
-            LLMessageDateCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-            if (!cell) {
-                cell = [[LLMessageDateCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
-            }
-            
-            [messageModel setNeedsUpdateForReuse];
-            cell.messageModel = messageModel;
-            _cell = cell;
-            break;
-        }
-        case kLLMessageBodyTypeGif: {
-            LLMessageGifCell *cell = [tableView dequeueReusableCellWithIdentifier: reuseId];
-            if (!cell) {
-                cell = [[LLMessageGifCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
-                [cell prepareForUse:messageModel.isFromMe];
-            }
-            
-            [messageModel setNeedsUpdateForReuse];
-            cell.messageModel = messageModel;
-            cell.delegate = self;
-            _cell = cell;
-            break;
-        }
-        case kLLMessageBodyTypeRecording: {
-            LLMessageRecordingCell *cell = [LLMessageRecordingCell sharedRecordingCell];
-            [messageModel setNeedsUpdateForReuse];
-            cell.messageModel = messageModel;
-            
-            _cell = cell;
-            break;
-        }
-        default:
-            break;
-    }
-    
-    if ([messageModel checkNeedsUpdate]) {
-        ((LLMessageBaseCell *)_cell).messageModel = messageModel;
-    }
-    
-    if ([_cell isKindOfClass:[LLMessageBaseCell class]]) {
-        LLMessageBaseCell *baseCell = (LLMessageBaseCell *)_cell;
-        [baseCell setCellEditingAnimated:NO];
-        if (baseCell.isCellSelected != messageModel.isSelected) {
-            baseCell.isCellSelected = messageModel.isSelected;
-        }
-        
-        switch(messageModel.messageBodyType) {
-            case kLLMessageBodyTypeLocation: {
-                if ([messageModel.address isEqualToString:LOCATION_UNKNOWE_ADDRESS] && !messageModel.isFetchingAddress) {
-                    [self asyncReGeocodeForMessageModel:messageModel];
-                }
-                break;
-            }
-            case kLLMessageBodyTypeVoice: {
-                LLMessageVoiceCell *voiceCell = (LLMessageVoiceCell *)_cell;
-                if (messageModel.isMediaPlaying != voiceCell.isVoicePlaying) {
-                    if (messageModel.isMediaPlaying) {
-                        [voiceCell startVoicePlaying];
-                    }else {
-                        [voiceCell stopVoicePlaying];
-                    }
-                }
-                
-                break;
-            }
-            default:
-                break;
-        }
-    }
-    
-    [UIView setAnimationsEnabled:YES];
-    return _cell;
+    UITableViewCell *cell = [UITableViewCell new];
+    return cell;
     
 }
 
