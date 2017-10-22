@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E089BB21F7944A800EC26FD /* MBProgressHUD+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E089BB11F7944A800EC26FD /* MBProgressHUD+EXT.m */; };
+		5E19BA151F9CDC6E00A17395 /* HNChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19BA141F9CDC6E00A17395 /* HNChatViewController.m */; };
+		5E19BA191F9CE9CC00A17395 /* HNMessageBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19BA181F9CE9CC00A17395 /* HNMessageBaseCell.m */; };
 		5E2A2C4A1F8E71510010DCB1 /* HNContactDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A2C491F8E71510010DCB1 /* HNContactDetailsController.m */; };
 		5E3CBFD31F71587200445C65 /* AA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CBFC51F71587200445C65 /* AA.m */; };
 		5E3CBFD41F71587200445C65 /* BB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CBFC71F71587200445C65 /* BB.m */; };
@@ -153,6 +155,10 @@
 		5E089BB11F7944A800EC26FD /* MBProgressHUD+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+EXT.m"; sourceTree = "<group>"; };
 		5E19BA0C1F9B73C900A17395 /* HNSearchResultDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchResultDelegate.h; sourceTree = "<group>"; };
 		5E19BA0F1F9B749900A17395 /* HNSearchControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSearchControllerDelegate.h; sourceTree = "<group>"; };
+		5E19BA131F9CDC6E00A17395 /* HNChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNChatViewController.h; sourceTree = "<group>"; };
+		5E19BA141F9CDC6E00A17395 /* HNChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChatViewController.m; sourceTree = "<group>"; };
+		5E19BA171F9CE9CC00A17395 /* HNMessageBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNMessageBaseCell.h; sourceTree = "<group>"; };
+		5E19BA181F9CE9CC00A17395 /* HNMessageBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNMessageBaseCell.m; sourceTree = "<group>"; };
 		5E2A2C481F8E71510010DCB1 /* HNContactDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactDetailsController.h; sourceTree = "<group>"; };
 		5E2A2C491F8E71510010DCB1 /* HNContactDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactDetailsController.m; sourceTree = "<group>"; };
 		5E3CBFC41F71587200445C65 /* AA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AA.h; sourceTree = "<group>"; };
@@ -489,6 +495,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E19BA161F9CE9B100A17395 /* WeChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				5E19BA171F9CE9CC00A17395 /* HNMessageBaseCell.h */,
+				5E19BA181F9CE9CC00A17395 /* HNMessageBaseCell.m */,
+			);
+			path = WeChatCell;
+			sourceTree = "<group>";
+		};
 		5E2A2C471F8E71130010DCB1 /* ContactDetailsController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1193,6 +1208,7 @@
 				E2F07DB61F94A84F008D4DDB /* HNConversationListCell.m */,
 				E2F07DB71F94A84F008D4DDB /* HNSearchBar.h */,
 				E2F07DB81F94A84F008D4DDB /* HNSearchBar.m */,
+				5E19BA161F9CE9B100A17395 /* WeChatCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1202,6 +1218,8 @@
 			children = (
 				E2F07DBA1F94A84F008D4DDB /* HNConversationListController.h */,
 				E2F07DBB1F94A84F008D4DDB /* HNConversationListController.m */,
+				5E19BA131F9CDC6E00A17395 /* HNChatViewController.h */,
+				5E19BA141F9CDC6E00A17395 /* HNChatViewController.m */,
 				E2F6B8F11F95DAF600C34BEF /* HNSearchViewController(搜索) */,
 			);
 			path = ViewController;
@@ -1394,6 +1412,7 @@
 				E2F6B9001F95F3EB00C34BEF /* HNButtonPlace.m in Sources */,
 				5E3CBFD81F71587200445C65 /* HNPhotoView.m in Sources */,
 				E2F07DAB1F949575008D4DDB /* HNPersonalDetailsCell.m in Sources */,
+				5E19BA151F9CDC6E00A17395 /* HNChatViewController.m in Sources */,
 				5E3CC0071F715A5000445C65 /* UIButton+WebCache.m in Sources */,
 				5E4122E08811E0EBB5AA4DC2 /* AppDelegate.m in Sources */,
 				E29F50FE1F8E02CF00A030D8 /* HNContactSearchView.m in Sources */,
@@ -1465,6 +1484,7 @@
 				5E3CC0481F715C1A00445C65 /* NSString+PhoneEmail.m in Sources */,
 				5EA71D051F888EAA00850CDB /* UILabel+Extensions.m in Sources */,
 				5E3CBFD61F71587200445C65 /* HNLookPhotoCell.m in Sources */,
+				5E19BA191F9CE9CC00A17395 /* HNMessageBaseCell.m in Sources */,
 				5E3CC0001F715A5000445C65 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
